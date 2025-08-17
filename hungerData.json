@@ -1,0 +1,114 @@
+{
+  "Ethiopia": {
+    "flag": "https://flagcdn.com/w320/et.png",
+    "stats": [
+      "20 million people need food assistance.",
+      "Severe drought impacts rural farmers."
+    ],
+    "deaths": "Hunger-related deaths trending upward in drought zones",
+    "access": "Household dietary diversity remains low in arid areas.",
+    "zeroHungerIssues": [
+      "Prolonged drought cycles",
+      "Conflict-driven displacement",
+      "Post-harvest losses in staple grains"
+    ]
+  },
+  "Niger": {
+    "flag": "https://flagcdn.com/w320/ne.png",
+    "stats": [
+      "1.7 million people are food insecure.",
+      "45% of children between 6 months and 4 years old are malnourished."
+    ],
+    "deaths": "Est. annual hunger-related deaths: 12,000",
+    "access": "Only ~35% have regular access to diverse, nutritious food.",
+    "zeroHungerIssues": [
+      "Recurrent drought affecting yields",
+      "High child malnutrition in rural regions",
+      "Limited market access for smallholders"
+    ]
+  },
+  "Sudan": {
+    "flag": "https://flagcdn.com/w320/sd.png",
+    "stats": [
+      "15 million people face acute food insecurity.",
+      "Conflict zones are hardest hit."
+    ],
+    "deaths": "Thousands of preventable deaths annually due to hunger.",
+    "access": "Large portions of rural areas lack stable food access.",
+    "zeroHungerIssues": [
+      "Civil conflict disrupting farming",
+      "Flooding and desertification",
+      "Dependence on food aid"
+    ]
+  },
+  "Somalia": {
+    "flag": "https://flagcdn.com/w320/so.png",
+    "stats": [
+      "6.5 million people require humanitarian food aid.",
+      "Recurrent drought is devastating herders."
+    ],
+    "deaths": "High mortality from famine in drought-prone regions.",
+    "access": "Only 20% have reliable access to diverse food.",
+    "zeroHungerIssues": [
+      "Prolonged drought",
+      "Conflict limiting aid delivery",
+      "High reliance on imports"
+    ]
+  },
+  "Nigeria": {
+    "flag": "https://flagcdn.com/w320/ng.png",
+    "stats": [
+      "Over 25 million people face food insecurity.",
+      "Conflict in the northeast worsens hunger."
+    ],
+    "deaths": "Thousands of children die each year from malnutrition.",
+    "access": "Food access highly unequal between rural and urban areas.",
+    "zeroHungerIssues": [
+      "Armed conflict in the northeast",
+      "High food price inflation",
+      "Post-harvest losses"
+    ]
+  },
+  "Kenya": {
+    "flag": "https://flagcdn.com/w320/ke.png",
+    "stats": [
+      "4.4 million people need emergency food aid.",
+      "Prolonged droughts reduce crop production."
+    ],
+    "deaths": "Malnutrition-related deaths rise in arid counties.",
+    "access": "40% of rural households lack stable food access.",
+    "zeroHungerIssues": [
+      "Drought and water scarcity",
+      "Poor infrastructure for food distribution",
+      "High youth unemployment"
+    ]
+  },
+  "Uganda": {
+    "flag": "https://flagcdn.com/w320/ug.png",
+    "stats": [
+      "1.5 million people are food insecure.",
+      "Refugee influx strains local resources."
+    ],
+    "deaths": "Child malnutrition remains a leading cause of mortality.",
+    "access": "Dietary diversity is poor in rural households.",
+    "zeroHungerIssues": [
+      "High refugee burden",
+      "Climate variability",
+      "Market price shocks"
+    ]
+  },
+  "Democratic Republic of the Congo": {
+    "flag": "https://flagcdn.com/w320/cd.png",
+    "stats": [
+      "26 million people are food insecure.",
+      "Conflict and displacement disrupt farming."
+    ],
+    "deaths": "Second-highest hunger-related deaths globally.",
+    "access": "Many rural families live on subsistence farming with little diversity.",
+    "zeroHungerIssues": [
+      "Armed conflict and instability",
+      "Displacement of rural farmers",
+      "Lack of infrastructure for food storage and transport"
+    ]
+  }
+}

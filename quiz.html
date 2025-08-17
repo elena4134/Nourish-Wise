@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | NourishWise</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <!-- Header (same across all pages) -->
+  <header class="site-header">
+    <div class="logo"><a href="index.html">NourishWise</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="recipe.html">Recipe</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Quiz Games -->
+  <section class="quiz-section container">
+    <h2 class="section-title">Nutritional Games <span>🏆</span></h2>
+    <div class="quiz-cards">
+      <div class="quiz-card">
+        <img src="images/fruit-salad.jpg" alt="Healthy Eating">
+        <div class="quiz-info">
+          <h3>How do you eat healthy?</h3>
+          <p>Learn healthy eating basics, balanced meals, and tips.</p>
+          <button class="play-btn" data-quiz="healthy">Play Now</button>
+        </div>
+      </div>
+
+      <div class="quiz-card">
+        <img src="images/nutrition-facts.jpg" alt="Nutrition Facts">
+        <div class="quiz-info">
+          <h3>Nutrition Facts</h3>
+          <p>Test your knowledge on nutrients and food labels.</p>
+          <button class="play-btn" data-quiz="facts">Play Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--other-->
+<!-- Farming Challenge Quiz -->
+<section class="farming-quiz-section container">
+  <h2 class="section-title">Farming Challenge Quiz</h2>
+
+  <div class="farming-card">
+    <div class="farming-info">
+      <h3>Farming Challenge</h3>
+      <p>Try this short challenge to learn key farming facts.</p>
+      <button class="btn play-btn-farm" data-quiz="farming">Play Now</button>
+    </div>
+    <div class="farming-image-wrap">
+      <img class="farming-img" src="images/farming.jpg" alt="Farming fields">
+    </div>
+  </div>
+</section>
+
+<!-- Food Waste Fact Quiz -->
+<section class="foodwaste-quiz-section container">
+  <h2 class="section-title">Food Waste Fact Quiz 🎮</h2>
+
+  <div class="foodwaste-cards">
+    <div class="fw-card">
+      <h3>Home Waste</h3>
+      <p>Simple tips to reduce food waste at home.</p>
+      <button class="btn play-btn-fw" data-fw="fw1">Play</button>
+    </div>
+
+    <div class="fw-card">
+      <h3>Shopping & Storage</h3>
+      <p>Learn how shopping and storing affects waste.</p>
+      <button class="btn play-btn-fw" data-fw="fw2">Play</button>
+    </div>
+
+    <div class="fw-card">
+      <h3>Preservation</h3>
+      <p>Freezing, pickling and other preservation methods.</p>
+      <button class="btn play-btn-fw" data-fw="fw3">Play</button>
+    </div>
+  </div>
+</section>
+
+<!-- Farming Quiz Modal -->
+<div id="modal-farm" class="quiz-modal" aria-hidden="true">
+  <div class="quiz-modal-box">
+    <button class="modal-close" data-target="modal-farm" aria-label="Close">×</button>
+    <h3>Farming Challenge</h3>
+    <div id="farmQuizContainer" class="quiz-container"></div>
+  </div>
+</div>
+
+<!-- Food Waste Quiz Modal (reused for all fw cards) -->
+<div id="modal-fw" class="quiz-modal" aria-hidden="true">
+  <div class="quiz-modal-box">
+    <button class="modal-close" data-target="modal-fw" aria-label="Close">×</button>
+    <h3>Food Waste Quiz</h3>
+    <div id="fwQuizContainer" class="quiz-container"></div>
+  </div>
+</div>
+
+
+  <!-- Quiz Modal -->
+  <div id="quizModal" class="quiz-modal">
+    <div class="quiz-modal-content">
+      <span class="quiz-close-btn">&times;</span>
+      <h3 id="quizTitle"></h3>
+      <div id="quizQuestions"></div>
+      <div class="quiz-footer">
+        <button id="submitQuiz" class="submit-btn">Submit Answers</button>
+        <p id="quizScore"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz.js" defer></script>
+  <script src="quiz-fw-farm.js" defer></script>
+</body>
+</html>

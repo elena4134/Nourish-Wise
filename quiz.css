@@ -1,0 +1,251 @@
+.quiz-section {
+    padding: 40px;
+  }
+  
+  .quiz-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .quiz-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+  }
+  
+  .quiz-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .quiz-info {
+    padding: 20px;
+  }
+  
+  .play-btn {
+    background: #ffd84d;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .quiz-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quiz-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .quiz-close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .question {
+    margin-bottom: 15px;
+  }
+  
+  .option-btn {
+    display: block;
+    background: #f1f1f1;
+    border: none;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .option-btn:hover {
+    background: #ffd84d;
+  }
+  
+  .quiz-footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .submit-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* Farming Quiz */
+.farming-quiz-section {
+    margin: 50px auto;
+    text-align: center;
+  }
+  .farming-quiz-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .farming-banner {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .farming-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .farming-banner-content {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  .farming-banner-content button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+/* Farming Quiz Section */
+.farming-quiz-section {
+    margin: 50px auto;
+    max-width: 1100px;
+  }
+  .farming-card {
+    display: flex;
+    align-items: center;
+    background: #fff8e7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .farming-img {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .farming-info {
+    padding: 20px;
+    flex: 1;
+  }
+  .farming-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .farming-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .farming-info .play-btn {
+    background: #ffda5a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Food Waste Quiz Section */
+  .foodwaste-quiz-section {
+    margin: 50px auto;
+    max-width: 1100px;
+  }
+  .foodwaste-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .fw-card {
+    flex: 1;
+    min-width: 280px;
+    background: linear-gradient(#bdeaff, #b9e8a8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .fw-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .fw-card p {
+    font-size: 0.95rem;
+    flex-grow: 1;
+  }
+  .fw-card .play-btn {
+    align-self: center;
+    margin-top: 15px;
+    background: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+
+  .quiz-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .quiz-content {
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  .quiz-close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .quiz-question {
+    margin-bottom: 15px;
+  }
+  .quiz-options button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+  }
+  .quiz-feedback {
+    margin-top: 10px;
+    font-size: 0.95rem;
+  }
+  

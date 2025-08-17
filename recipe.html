@@ -1,0 +1,642 @@
+<!-- recipe.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes | Zero Hunger Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .zero-waste-cards-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+    }
+    .zero-card {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      height: auto;
+      perspective: 1000px;
+    }
+    .zero-card-inner {
+      position: relative;
+      width: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .zero-card.flipped .zero-card-inner {
+      transform: rotateY(180deg);
+    }
+    .zero-card-front, .zero-card-back {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: row;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .zero-card-back {
+      transform: rotateY(180deg);
+      padding: 1.5em;
+      justify-content: center;
+    }
+    .zero-card-img {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+    }
+    .zero-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .zero-card-info, .zero-card-back-content {
+      flex: 2;
+      padding: 1.5em;
+    }
+    .zero-card-info h3, .zero-card-back-content h3 {
+      margin-top: 0;
+    }
+    .zero-card-back-content ol {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><a href="index.html">Zero Hunger Web</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="recipe.html" class="active">Recipe</a></li>
+        <li><a href="quiz.html">Quiz Challenges</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Recipe Page Layout -->
+  <section class="recipe-section container">
+    <h2 class="section-title">Locally Sourced Recipes <span>🍽️</span></h2>
+    <div class="recipe-cards">
+      <div class="card">
+        <img src="images/sayurlemak.jpg" alt="Sayur Lemak" />
+        <h3>Sayur Lemak with Ubi Keledek</h3>
+        <ul>
+          <li>Ubi keledak leaves are nutrient-dense and easy to grow.</li>
+          <li>Can be made vegetarian/vegan or with local protein.</li>
+          <li>Uses minimal ingredients and is filling.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="images/nasiulam.jpg" alt="Nasi Ulam" />
+        <h3>Nasi Ulam Kampung</h3>
+        <ul>
+          <li>Zero waste: uses leftover rice.</li>
+          <li>Rich in micronutrients from local herbs.</li>
+          <li>No cooking required, just prep.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="images/buburlabu.jpg" alt="Bubur Labu" />
+        <h3>Bubur Labu & Keledek</h3>
+        <ul>
+          <li>Uses commonly grown root vegetables.</li>
+          <li>Naturally sweet and filling.</li>
+          <li>Can be eaten as dessert or light meal.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<!-- recipe.html -->
+<!-- recipe.html -->
+<section class="recipe-section container">
+  <h2 class="section-title">Beginner-Friendly Recipes <span>✅</span></h2>
+  <div class="beginner-cards">
+    <div class="card beginner-flip">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/kangkong.jpg" alt="Kangkong Stir Fry" class="recipe-img" />
+          <h3>Stir-Fried Kangkung</h3>
+          <p>Low-Cost and Nutritious too!</p>
+          <button class="learn-btn">Learn How to Make</button>
+        </div>
+        <div class="card-back">
+          <h3>How to Make Stir-Fried Kangkung</h3>
+          <ol>
+            <li>Wash and cut kangkung leaves.</li>
+            <li>Sauté garlic in oil until fragrant.</li>
+            <li>Add kangkung, stir-fry 2-3 mins.</li>
+            <li>Season with salt and serve hot.</li>
+          </ol>
+          <button class="back-btn">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card beginner-flip">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/friedrice.jpg" alt="Fried Rice" class="recipe-img" />
+          <h3>Basic Fried Rice</h3>
+          <p>Low-Costing meal!</p>
+          <button class="learn-btn">Learn How to Make</button>
+        </div>
+        <div class="card-back">
+          <h3>How to Make Fried Rice</h3>
+          <ol>
+            <li>Heat oil and fry garlic/onion.</li>
+            <li>Add veggies and leftover rice.</li>
+            <li>Stir in soy sauce and egg (optional).</li>
+            <li>Stir-fry until heated. Serve hot.</li>
+          </ol>
+          <button class="back-btn">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card beginner-flip">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/telurdadar.jpg" alt="Telur Dadar" class="recipe-img" />
+          <h3>Telur Dadar Sayur</h3>
+          <p>Low-Cost and Nutritious Breakfast!</p>
+          <button class="learn-btn">Learn How to Make</button>
+        </div>
+        <div class="card-back">
+          <h3>How to Make Telur Dadar</h3>
+          <ol>
+            <li>Beat eggs with chopped veggies.</li>
+            <li>Add salt/pepper and mix well.</li>
+            <li>Pour into heated pan, cook both sides.</li>
+            <li>Serve hot with rice or bread.</li>
+          </ol>
+          <button class="back-btn">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .beginner-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  .beginner-flip {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .beginner-flip.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .recipe-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+  }
+  .learn-btn, .back-btn {
+    margin-top: 1em;
+    background: #f0c000;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  </style>
+  
+  <script>
+  document.querySelectorAll('.learn-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const card = e.target.closest('.beginner-flip');
+      card.classList.add('flipped');
+    });
+  });
+  
+  document.querySelectorAll('.back-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const card = e.target.closest('.beginner-flip');
+      card.classList.remove('flipped');
+    });
+  });
+  </script>
+
+
+  <!-- Zero Waste Recipes Section -->
+  <!-- Zero Waste Recipes Section -->
+  <section class="recipe-section container">
+    <h2 class="section-title">Zero Waste Recipes 🌱</h2>
+    <div class="zero-waste-cards-flex">
+      <div class="zero-card" onclick="this.classList.toggle('flipped')">
+        <div class="zero-card-inner">
+          <div class="zero-card-front">
+            <div class="zero-card-info">
+              <h3>Vegetable Scrap Broth</h3>
+              <p>- Beginner-friendly | Vegan</p>
+              <p>🍺 Ingredients:</p>
+              <ul>
+                <li>Onion skins, garlic peels</li>
+                <li>Carrot ends, celery tops</li>
+                <li>Herb stems</li>
+                <li>Water, salt, pepper</li>
+              </ul>
+            </div>
+            <div class="zero-card-img">
+              <img src="images/broth.jpg" alt="Vegetable Scrap Broth" />
+            </div>
+          </div>
+          <div class="zero-card-back">
+            <div class="zero-card-back-content">
+              <h3>How to Make:</h3>
+              <ol>
+                <li>Collect all vegetable scraps and rinse them.</li>
+                <li>Boil in water for 30-45 minutes.</li>
+                <li>Season with salt and pepper.</li>
+                <li>Strain and store broth for use.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zero-card" onclick="this.classList.toggle('flipped')">
+        <div class="zero-card-inner">
+          <div class="zero-card-front">
+            <div class="zero-card-info">
+              <h3>Masak Kulit Pisang</h3>
+              <p>- Zero-Waste | Low Cost | Vegan</p>
+              <p>🍺 Ingredients:</p>
+              <ul>
+                <li>Peels from 2 bananas</li>
+                <li>Onion, garlic, turmeric</li>
+                <li>Salt, oil</li>
+              </ul>
+            </div>
+            <div class="zero-card-img">
+              <img src="images/pisang.jpg" alt="Masak Kulit Pisang" />
+            </div>
+          </div>
+          <div class="zero-card-back">
+            <div class="zero-card-back-content">
+              <h3>How to Make:</h3>
+              <ol>
+                <li>Clean and slice banana peels.</li>
+                <li>Sauté onion and garlic in oil.</li>
+                <li>Add turmeric and peels, cook till soft.</li>
+                <li>Season and serve warm.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zero-card" onclick="this.classList.toggle('flipped')">
+        <div class="zero-card-inner">
+          <div class="zero-card-front">
+            <div class="zero-card-info">
+              <h3>Stale Bread Pudding w/ Fruits</h3>
+              <p>- Zero-Waste | Beginner-Friendly | Dessert</p>
+              <p>🍺 Ingredients:</p>
+              <ul>
+                <li>Stale bread, overripe banana</li>
+                <li>Egg, milk, sugar/honey</li>
+              </ul>
+            </div>
+            <div class="zero-card-img">
+              <img src="images/bread1.jpg" alt="Stale Bread Pudding" />
+            </div>
+          </div>
+          <div class="zero-card-back">
+            <div class="zero-card-back-content">
+              <h3>How to Make:</h3>
+              <ol>
+                <li>Break bread into pieces in a bowl.</li>
+                <li>Mash banana and mix with egg, milk, and sugar.</li>
+                <li>Pour mixture over bread, soak 10 mins.</li>
+                <li>Bake at 180°C for 25 mins. Serve warm.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--low cost-->
+<!-- recipe.html -->
+<section class="recipe-section container">
+  <h2 class="section-title">Low-Cost Recipes</h2>
+  <div class="low-cost-cards">
+    <div class="low-cost-card" style="background-image: url('images/friedrice.jpg');">
+      <div class="low-cost-overlay">
+        <h3>Basic Fried Rice</h3>
+        <p>Turn leftovers into a delicious, satisfying meal!</p>
+      </div>
+      <div class="low-cost-details hidden">
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>1 cup cooked rice</li>
+          <li>1 egg (optional)</li>
+          <li>Mixed vegetables</li>
+          <li>Soy sauce, oil</li>
+        </ul>
+        <h4>Steps:</h4>
+        <ol>
+          <li>Heat oil in a pan, fry egg and veggies.</li>
+          <li>Add rice and soy sauce, stir well.</li>
+          <li>Cook for 2-3 minutes and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="low-cost-card" style="background-image: url('images/soup.jpg');">
+      <div class="low-cost-overlay">
+        <h3>Potato & Carrot Soup</h3>
+        <p>Warm, hearty, and made from pantry basics.</p>
+      </div>
+      <div class="low-cost-details hidden">
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 potatoes</li>
+          <li>2 carrots</li>
+          <li>1 onion, water, salt</li>
+        </ul>
+        <h4>Steps:</h4>
+        <ol>
+          <li>Chop veggies, sauté onion.</li>
+          <li>Add potatoes, carrots, water.</li>
+          <li>Boil until soft, mash slightly, season.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="low-cost-card" style="background-image: url('images/omelet.jpg');">
+      <div class="low-cost-overlay">
+        <h3>Simple Veg Omelette</h3>
+        <p>Protein-packed and ready in minutes!</p>
+      </div>
+      <div class="low-cost-details hidden">
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 eggs</li>
+          <li>Chopped veggies</li>
+          <li>Salt, pepper, oil</li>
+        </ul>
+        <h4>Steps:</h4>
+        <ol>
+          <li>Beat eggs with veggies and seasonings.</li>
+          <li>Cook in pan until firm.</li>
+          <li>Serve with rice or bread.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.low-cost-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+}
+.low-cost-card {
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.low-cost-card:hover {
+  transform: scale(1.03);
+}
+.low-cost-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+.low-cost-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  color: #333;
+  font-size: 0.9em;
+  display: none;
+  overflow-y: auto;
+}
+.low-cost-card.show-details .low-cost-details {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.hidden {
+  display: none;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+
+<script>
+document.querySelectorAll('.low-cost-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.low-cost-card').forEach(c => {
+      if (c !== card) c.classList.remove('show-details');
+    });
+    card.classList.toggle('show-details');
+  });
+});
+</script>
+
+<!--recipe of the week-->
+<!-- recipe.html -->
+<section class="recipe-section container section-color1">
+  <h2 class="section-title">Recipe of the Week <span>🍳</span></h2>
+  <div class="recipe-highlight" id="weeklyRecipe">
+    <img id="weeklyRecipeImg" src="images/nasi-lemak.jpg" alt="Recipe" />
+    <div class="recipe-info">
+      <h3 id="weeklyRecipeTitle">Nasi Lemak</h3>
+      <p id="weeklyRecipeDesc">Ingredients:<br>Steps:<br>Instructions:</p>
+    </div>
+  </div>
+</section>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .logo a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: #007b5e;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+nav a.active {
+  border-bottom: 2px solid #f0c000;
+}
+
+.section-color1 {
+  background-color: #f9f5e9;
+  padding: 2em 1em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+.section-color2 {
+  background-color: #e6f2f1;
+  padding: 2em 1em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.recipe-highlight {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+.recipe-highlight img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.recipe-info {
+  max-width: 400px;
+}
+</style>
+
+<script>
+const weeklyRecipes = [
+  {
+    title: "Nasi Lemak",
+    img: "images/nasi-lemak.jpg",
+    desc: "Ingredients: Rice, coconut milk, sambal, egg, cucumber<br>Steps: Cook rice in coconut milk, prepare sambal sauce, serve with sides."
+  },
+  {
+    title: "Fried Rice",
+    img: "images/friedrice.jpg",
+    desc: "Ingredients: Rice, egg, veggies, soy sauce<br>Steps: Stir-fry all ingredients until well cooked."
+  },
+  {
+    title: "Potato Soup",
+    img: "images/potato-soup.jpg",
+    desc: "Ingredients: Potatoes, carrots, onion<br>Steps: Boil all, mash slightly, season to taste."
+  },
+  {
+    title: "Veg Omelette",
+    img: "images/omelette.jpg",
+    desc: "Ingredients: Eggs, veggies, seasoning<br>Steps: Beat eggs, add veggies, cook in pan."
+  }
+];
+
+const today = new Date();
+const weekNumber = Math.floor(today.getTime() / (7 * 24 * 60 * 60 * 1000));
+const recipeIndex = weekNumber % weeklyRecipes.length;
+const selectedRecipe = weeklyRecipes[recipeIndex];
+
+document.getElementById('weeklyRecipeTitle').innerText = selectedRecipe.title;
+document.getElementById('weeklyRecipeImg').src = selectedRecipe.img;
+document.getElementById('weeklyRecipeDesc').innerHTML = selectedRecipe.desc;
+</script>
+
+  <footer>
+    <p>© 2025 Zero Hunger Web. All rights reserved.</p>
+  </footer>
+</body>
+</html>
