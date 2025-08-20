@@ -820,6 +820,56 @@ nav a {
 nav a.active {
   border-bottom: 2px solid rgb(255, 209, 6);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  header {
+    background: rgba(255, 255, 255, 0.247); /* semi-transparent */
+    padding: 1px 0; /* reduced height */
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px); /* optional: softens background behind it */
+  }
+
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007b5e;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
 .container {
   padding: 2em;
 }
@@ -1288,4 +1338,1088 @@ html, body {
   font-weight: bold;
   color: #0d5b26;
   display: block;
+}
+
+
+/*quiz at intro*/
+/* Quiz Section */
+.quiz-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.quiz-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.quiz-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #c99aff; /* purple accent */
+}
+
+.quiz-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #d1d1e0;
+}
+
+.quiz-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  transform: scale(1.05);
+}
+
+/*updated quiz section at intro*/
+/* Quiz Intro Section */
+.quiz-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b3d2e, #145a32); /* dark green tones #0b3d2e*/ 
+  color: #000000;
+}
+
+.quiz-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #f4e87c; /* soft yellow accent */
+}
+
+.quiz-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.quiz-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #f4e87c, #d4af37); /* yellow modern */
+  color: #0b3d2e;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 14px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.quiz-btn:hover {
+  background: linear-gradient(135deg, #d4af37, #f4e87c);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/*guide scroll*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*updated intro recipe*/
+/* Recipe Section */
+.recipe-section {
+  padding: 60px 20px;
+  background: #f9f9f9; /* light background for contrast */
+}
+
+.recipe-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1b5e20; /* dark green */
+  margin-bottom: 40px;
+}
+
+.recipe-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-cards .card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.recipe-cards .card h3 {
+  margin-bottom: 3px;
+  font-size: 1.3rem;
+  color: #2e7d32; /* slightly lighter green */
+
+}
+
+.recipe-cards .card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/*center*/
+.recipe-cards .card {
+  background: #fff;
+  border: 2px solid #1a5c1a;
+  border-radius: 12px;
+  width: 250px;
+  min-height: 180px; /* ensures all boxes same height */
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+  display: flex;              /* flexbox fix */
+  flex-direction: column;     /* stack items */
+  justify-content: center;    /* center vertically */
+  align-items: center;        /* center horizontally */
+
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-cards .card h3 {
+  margin: 0 0 10px 0; /* tighter spacing */
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.recipe-cards .card p {
+  margin: 0; /* remove weird spacing */
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/*space issue*/
+.recipe-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;  /* allow wrapping on smaller screens */
+  justify-content: center;
+}
+
+.recipe-cards .card {
+  background: #fff;
+  border: 2px solid #1a5c1a;
+  border-radius: 12px;
+  flex: 1 1 280px;   /* responsive width: min 280px, expands evenly */
+  max-width: 320px;  /* keeps them from getting too wide */
+  min-height: 220px; /* taller boxes for better readability */
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centers vertically */
+  align-items: center;      /* centers horizontally */
+
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-cards .card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: #2d572c; /* dark green heading */
+}
+
+.recipe-cards .card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.recipe-cards .card {
+  background: #fff;
+  border: 2px solid #1a5c1a;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  min-height: 220px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* start from top instead of full center */
+  align-items: center;
+  gap: 10px; /* clean spacing between elements */
+
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-cards .card h3,
+.recipe-cards .card p {
+  margin: 0; /* remove default margins */
+  padding: 0;
+}
+
+.recipe-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* space between title and description */
+
+  background: #fff;
+  border: 2px solid #1a5c1a;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  min-height: 220px;
+  padding: 25px 20px; /* balanced padding (more top/bottom) */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-cards .card h3 {
+  margin: 0;
+  font-size: 1.4rem; /* bigger title */
+  color: #1a5c1a;
+  font-weight: 600;
+}
+
+.recipe-cards .card p {
+  margin: 0;
+  font-size: 1.05rem; /* bigger description */
+  color: #444;
+  line-height: 1.4;
+}
+
+.wlogo {
+  width: 75px; /* Sets a fixed width of 150 pixels */
+  height: 75px;  /* Sets a fixed height of 75 pixels */
+  
+}
+
+/*new*/
+.sub-header {
+  background: rgba(255, 255, 255, 0.85); /* similar to nav header */
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.sub-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007b5e; /* same green as your logo/nav */
+  margin: 0;
+}
+
+/*intro button*/
+.card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007b5e;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #005f47;
+}
+
+.recipe-cards .card p {
+  margin-bottom: 15px; /* adds space between description and button */
+  font-size: 16px;      /* make it a bit more readable */
+  line-height: 1.5;
+}
+
+.recipe-cards .card .btn {
+  display: inline-block;
+  margin-top: 17px;      /* ensure small spacing above */
+  padding: 8px 16px;
+  background-color: #007b5e;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.recipe-cards .card .btn:hover {
+  background-color: #005f47;
+}
+
+/* Logo link styling */
+.logo a {
+  text-decoration: none;   /* remove underline */
+  color: #007b5e;          /* green theme */
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Ensure logo + nav are aligned nicely */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Recipe Cards */
+.recipe-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;   /* Fixed height */
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.recipe-info h3 {
+  margin-bottom: 8px;
+  color: #007b5e;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.guide-info-block {
+  display: none;   /* hide by default */
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.guide-info-block.active {
+  display: block;  /* only show active */
+}
+
+/*tip*/
+/* Hide all guide blocks by default */
+.guide-info-block {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.guide-info-block.active {
+  display: block;
+}
+
+/* Highlight active button */
+.guide-btn.active {
+  background: #0d7a5b;
+  color: #fff;
+  border-color: #0d7a5b;
+}
+
+
+/*updated farm*/
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.guide-btn {
+  padding: 10px 18px;
+  border: 1px solid #0d7a5b;
+  border-radius: 6px;
+  background: white;
+  color: #0d7a5b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.guide-btn:hover {
+  background: #e9f8f2;
+}
+
+.guide-btn.active {
+  background: #0d7a5b;
+  color: #fff;
+}
+
+.guide-content {
+  margin-top: 15px;
+}
+
+.guide-box {
+  display: none;
+  background: #f8fff8;
+  border: 1px solid #cce5cc;
+  border-radius: 8px;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.guide-box.active {
+  display: block;
+}
+
+.learn-more-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #0d7a5b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #09664b;
+}
+
+.learn-more-content {
+  display: none;
+  margin-top: 12px;
+  padding: 12px;
+  background: #fff;
+  border-left: 4px solid #0d7a5b;
+  border-radius: 4px;
+}
+
+.learn-more-content a {
+  color: #0d7a5b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.learn-more-content a:hover {
+  text-decoration: underline;
+}
+
+/*updated*/
+/* Farming Guides */
+.guides-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.guides-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #007b5e;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.guide-btn {
+  padding: 10px 20px;
+  background: #0a8456;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.guide-btn:hover,
+.guide-btn.active {
+  background: #05633e;
+}
+
+.guide-box {
+  display: none;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.guide-box.active {
+  display: block;
+}
+
+.learn-more-btn {
+  margin-top: 15px;
+  background: #0a8456;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #05633e;
+}
+
+.more-content {
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-left: 4px solid #0a8456;
+  border-radius: 6px;
+}
+
+.guides-section { padding: 60px 20px; text-align: center; }
+.guides-section h2 { font-size: 2rem; margin-bottom: 25px; color: #007b5e; }
+
+.button-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+.guide-btn { padding: 10px 20px; background: #0a8456; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+.guide-btn:hover, .guide-btn.active { background: #05633e; }
+
+.guide-box { display: none; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); max-width: 700px; margin: 0 auto; text-align: left; }
+.guide-box.active { display: block; }
+
+.learn-more-btn { margin-top: 15px; background: #0a8456; color: #fff; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; }
+.learn-more-btn:hover { background: #05633e; }
+
+.more-content { display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border-left: 4px solid #0a8456; border-radius: 6px; }
+.more-content.active { display: block; }
+
+/* Keeps the existing design; just ensures the reveal block has spacing */
+.guides-section .more-content { margin-top: 12px; }
+.guides-section .guide-btn.active { filter: brightness(0.92); }
+
+.guides-section .guide-info-block {
+  display: none;
+  margin-top: 20px;
+}
+.guides-section .guide-info-block.active {
+  display: block;
+}
+.guides-section .more-content {
+  margin-top: 12px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 3px solid #007b5e;
+}
+.guides-section .guide-btn.active {
+  background: #007b5e;
+  color: #fff;
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding-top: 0;
+}
+
+/* Farming Guide Learn More */
+.guide-more {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 3px solid #4CAF50;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+/* Nutrition Guide Learn More (animated) */
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding-top: 0;
+}
+
+/* Scope so these rules won't affect other pages/sections */
+
+/* --- Farming Guides --- */
+#farming-guides .button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+#farming-guides .guide-btn.active {
+  background: #0d7a50;
+  color: #fff;
+}
+
+#farming-guides .guide-info-block { display: none; }
+#farming-guides .guide-info-block.active { display: block; }
+
+#farming-guides .fg-more {
+  display: none;              /* hidden by default; revealed via JS slide */
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-left: 3px solid #0d7a50;
+  background: #f6faf8;
+  border-radius: 8px;
+}
+
+/* --- Nutrition Guides --- */
+#nutrition-guides .button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+#nutrition-guides .nutri-btn.active {
+  background: #0d7a50;
+  color: #fff;
+}
+
+#nutrition-guides .slide { display: none; }
+#nutrition-guides .slide.active { display: block; }
+
+#nutrition-guides .ng-more {
+  display: none;              /* hidden by default; revealed via JS slide */
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-left: 3px solid #0d7a50;
+  background: #f6faf8;
+  border-radius: 8px;
+}
+
+/* Optional: make “Learn More” look like a link but clickable */
+.fg-learn-more,
+.ng-learn {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0d7a50;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.fg-learn-more:hover,
+.ng-learn:hover { text-decoration: underline; }
+
+.meal-planner {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  animation: fadeIn 0.5s ease;
+}
+.meal-planner.hidden {
+  display: none;
+}
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #e6f8e7;
+  border-left: 4px solid #27ae60;
+  border-radius: 8px;
+  font-weight: 500;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.btn-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.meal-plan-btn {
+  background: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.meal-plan-btn:hover {
+  background: #43a047;
+}
+
+.meal-planner {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #e8f5e9;
+  font-weight: bold;
+}
+
+.meal-planner {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 5;          /* makes sure it sits above */
+  position: relative;  /* required for z-index to apply */
+}
+
+.meal-result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f4f9f4;
+  border-left: 4px solid #4caf50;
+  border-radius: 6px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.meal-planner.hidden {
+  display: none;
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f4f9f4;
+  border-left: 4px solid #4caf50;
+  border-radius: 6px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+/* Fix Learn More + Meal Planner cut-off */
+.ng-more, .meal-planner {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+/* When open, let it expand fully */
+.ng-more.open, .meal-planner.open {
+  max-height: 1000px; /* large enough to fit content */
+  padding-top: 10px;
+}
+
+/* Meal planner style */
+.meal-planner {
+  background: #fff;
+  margin-top: 15px;
+  padding: 0 12px; /* will animate in */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f4f9f4;
+  border-left: 4px solid #4caf50;
+  border-radius: 6px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+
+/* Make sure each slide can expand fully */
+.slide {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 20px;
+
+  /* ✅ Key fix */
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Make the slide-content wrapper expand too */
+.slide-content {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Fix for farming guide + nutritional guide cards */
+.guide-box,
+.slide {
+  position: relative;
+  overflow: visible !important;   /* ✅ allow content to flow out */
+  height: auto !important;        /* ✅ auto-expand with content */
+  max-height: none !important;    /* ✅ no clipping */
+}
+
+/* If you’re using .guide-info or .card-like wrappers */
+.guide-info,
+.meal-planner,
+.learn-more-content {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Make sure guide & nutrition boxes can rise above the section below */
+.guide-box,
+.slide {
+  position: relative;   /* creates a stacking context */
+  z-index: 10;          /* lift it above the next section */
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* For the meal planner result specifically */
+#mealPlanner,
+#mealResult {
+  position: relative;
+  z-index: 20;          /* even higher */
+  background: #fff;     /* solid background so it’s readable */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Ensure each section doesn't overlap the previous one */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Lift the nutrition section above */
+.nutrition-section {
+  position: relative;
+  z-index: 10;
+}
+
+/* Make sure the meal planner result is always on top */
+#mealPlanner, 
+#mealResult {
+  position: relative;
+  z-index: 999;   /* sits above everything else */
+  overflow: visible;
+}
+
+/* Prevent the next section from covering it */
+.cards-section {
+  position: relative;
+  z-index: 1;   /* keep it below the meal planner */
+}
+
+/* Ensure slides expand naturally */
+#nutrition-guides .slide {
+  position: relative;
+  z-index: 1;
+  overflow: visible !important;
+}
+
+/* Fix meal planner box */
+.meal-planner {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 10; /* make sure it stays above other sections */
+}
+
+/* Ensure results expand fully */
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  white-space: pre-line; /* keep line breaks */
+  position: relative;
+  z-index: 20;
+}
+
+/* Prevent flip-card section from covering above content */
+.flip-card-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Allow the meal planner to push down content below it */
+#nutrition-guides {
+  position: relative;
+  z-index: 5;
+}
+
+/* Force the container to expand with results */
+#nutrition-guides .slide {
+  overflow: visible !important;
+}
+
+/* Meal planner box */
+.meal-planner {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 10;
+}
+
+/* Meal results display */
+.meal-result {
+  margin-top: 15px;
+  padding: 14px;
+  background: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  line-height: 1.5;
+  white-space: pre-line;
+  position: relative;
+  z-index: 20;
+}
+
+/* Ensure flip card section doesn't overlap previous section */
+.flip-card-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px; /* give breathing room */
+}
+
+/* Make nutrition section always expand with its content */
+#nutrition-guides .slide {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Meal planner box */
+.meal-planner {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 10;
+}
+
+/* Result container */
+.meal-result {
+  margin-top: 15px;
+  padding: 14px;
+  background: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  line-height: 1.5;
+  white-space: pre-line;
+  position: relative;
+  z-index: 20;
+}
+
+/* Ensure the flip card section sits BELOW */
+.flip-card-section {
+  position: relative;
+  clear: both;       /* pushes it down properly */
+  margin-top: 60px;  /* breathing room */
+  z-index: 1;
 }
