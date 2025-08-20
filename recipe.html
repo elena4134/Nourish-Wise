@@ -66,57 +66,71 @@
       margin: 0;
       padding-left: 1.2em;
     }
+    /*header*/
+    /* Header container layout */
+
   </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="logo"><a href="index.html">Zero Hunger Web</a></div>
+    <div class="logo"><a href="index.html">NourishWise</a></div>
     <nav>
       <ul>
         <li><a href="index.html">Introduction</a></li>
         <li><a href="guides.html">Guides</a></li>
         <li><a href="recipe.html" class="active">Recipe</a></li>
-        <li><a href="quiz.html">Quiz Challenges</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Recipe Page Layout -->
-  <section class="recipe-section container">
-    <h2 class="section-title">Locally Sourced Recipes <span>🍽️</span></h2>
-    <div class="recipe-cards">
-      <div class="card">
-        <img src="images/sayurlemak.jpg" alt="Sayur Lemak" />
-        <h3>Sayur Lemak with Ubi Keledek</h3>
-        <ul>
-          <li>Ubi keledak leaves are nutrient-dense and easy to grow.</li>
-          <li>Can be made vegetarian/vegan or with local protein.</li>
-          <li>Uses minimal ingredients and is filling.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="images/nasiulam.jpg" alt="Nasi Ulam" />
-        <h3>Nasi Ulam Kampung</h3>
-        <ul>
-          <li>Zero waste: uses leftover rice.</li>
-          <li>Rich in micronutrients from local herbs.</li>
-          <li>No cooking required, just prep.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="images/buburlabu.jpg" alt="Bubur Labu" />
-        <h3>Bubur Labu & Keledek</h3>
-        <ul>
-          <li>Uses commonly grown root vegetables.</li>
-          <li>Naturally sweet and filling.</li>
-          <li>Can be eaten as dessert or light meal.</li>
-        </ul>
+  <section id="local-recipes" class="recipe-section">
+    <div class="container">
+      <h2>🍴 Locally Sourced Recipes</h2>
+      <div class="recipe-cards">
+        
+        <!-- Recipe Card -->
+        <div class="recipe-card" data-recipe="lentils">
+          <img src="images/friedrice.jpg" alt="Rice & Lentils">
+          <div class="recipe-info">
+            <h3>Rice & Lentils</h3>
+            <p>Nutritious, affordable, and simple to prepare.</p>
+          </div>
+        </div>
+  
+        <!-- Recipe Card -->
+        <div class="recipe-card" data-recipe="stirfry">
+          <img src="images/vege.png" alt="Veggie Stir Fry">
+          <div class="recipe-info">
+            <h3>Veggie Stir Fry</h3>
+            <p>Quick, colorful, and packed with vitamins.</p>
+          </div>
+        </div>
+  
+        <!-- Recipe Card -->
+        <div class="recipe-card" data-recipe="porridge">
+          <img src="images/broth.jpg" alt="Protein Porridge">
+          <div class="recipe-info">
+            <h3>Protein Porridge</h3>
+            <p>A hearty breakfast to start your day strong.</p>
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
+  
+  <!-- Recipe Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalContent"></p>
+    </div>
+  </div>
+  
 
 <!-- recipe.html -->
 <!-- recipe.html -->
@@ -516,59 +530,6 @@ document.querySelectorAll('.low-cost-card').forEach(card => {
 </section>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.site-header {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.site-header .logo a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 24px;
-  color: #007b5e;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-  margin: 0;
-  padding: 0;
-}
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-nav a.active {
-  border-bottom: 2px solid #f0c000;
-}
-
 .section-color1 {
   background-color: #f9f5e9;
   padding: 2em 1em;
@@ -599,6 +560,57 @@ nav a.active {
 .recipe-info {
   max-width: 400px;
 }
+/*header*/
+/* Unified header */
+header {
+  background: rgb(255, 255, 255); /* semi-transparent */
+  border-bottom: 1px solid #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px; /* keeps logo away from edge */
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Logo */
+header .logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007b5e; /* themed green */
+}
+
+/* Nav */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 20;
+  padding: 20;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+header nav a.active {
+  border-bottom: 2px solid #f0c000; /* yellow underline for active */
+}
+
+
+
 </style>
 
 <script>
