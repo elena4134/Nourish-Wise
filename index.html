@@ -9,7 +9,8 @@
 <body>
   <header class="sticky">
     <div class="container">
-      <h1 class="logo">NourishWise</h1>
+      <!--<img src="images/NourishWise.png" alt="logo" class="wlogo">-->
+      <div class="logo"><a href="index.html">NourishWise</a></div>
       <nav>
         <ul>
           <li><a href="#intro">Introduction</a></li>
@@ -1114,28 +1115,22 @@ THE SOFTWARE.
   </section>
   
 
+
   <section id="video" class="video-section">
     <div class="container">
       <h2 class="autoShow2">Healthy Nutrition</h2>
       <p class="autoShow2">Watch how balanced meals help combat hunger and malnutrition.</p>
       <div class="video-container">
-        <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/6Rv0H6B3w6g"
-        title="UN Zero Hunger"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-        </iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/81G22t2UHxA?si=_XhBHfXSzj4-GUo2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <section id="quiz" class="quiz-section">
-    <div class="container">
-      <h2 class="autoShow2">Quiz: How Much Do You Know?</h2>
-      <p class="autoShow2">Challenge yourself and spread awareness about global hunger.</p>
-      <a class="autoShow2" href="quiz.html" class="btn">Start Quiz</a>
+  <section class="quiz-section">
+    <div class="quiz-card">
+      <h2 class="quiz-title">📚 Quiz: How Much Do You Know?</h2>
+      <p class="quiz-subtitle">Challenge yourself and spread awareness about global hunger.</p>
+      <button class="quiz-btn" onclick="window.location.href='quiz.html'">Start Quiz</button>
     </div>
   </section>
 
@@ -1143,23 +1138,47 @@ THE SOFTWARE.
     <div class="container">
       <h2 class="autoShow2">Explore Our Guides</h2>
       <div class="guide-cards">
-        <div class="card"><h3 class="autoShow2">Reduce Food Waste</h3><p class="autoShow2">Practical tips to waste less.</p></div>
-        <div class="card"><h3 class="autoShow2">Help Locally</h3><p class="autoShow2">Support food drives and shelters.</p></div>
-        <div class="card"><h3 class="autoShow2">Sustainable Farming</h3><p class="autoShow2">Support ethical food systems.</p></div>
+        <div class="card">
+          <h3 class="autoShow2">Reduce Food Waste</h3>
+          <p class="autoShow2">Practical tips to waste less.</p>
+          <a href="guides.html#food-waste" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3 class="autoShow2">Help Locally</h3>
+          <p class="autoShow2">Support food drives and shelters.</p>
+          <a href="guides.html#help-locally" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3 class="autoShow2">Sustainable Farming</h3>
+          <p class="autoShow2">Support ethical food systems.</p>
+          <a href="guides.html#farming" class="btn">Read More</a>
+        </div>
       </div>
     </div>
   </section>
-
+  
   <section id="recipe" class="recipe-section">
     <div class="container">
       <h2>Healthy & Affordable Recipes</h2>
       <div class="recipe-cards">
-        <div class="card"><h3 class="autoShow2">Rice & Lentils</h3><p class="autoShow2">Nutritious and easy to make.</p></div>
-        <div class="card"><h3 class="autoShow2">Veggie Stir Fry</h3><p class="autoShow2">Quick and packed with vitamins.</p></div>
-        <div class="card"><h3 class="autoShow2">Protein Porridge</h3><p class="autoShow2">Great for starting the day strong.</p></div>
+        <div class="card">
+          <h3 class="autoShow2">🍚 Rice & Lentils</h3>
+          <p class="autoShow2">Nutritious and easy to make.</p>
+          <a href="recipe.html#rice-lentils" class="btn">View Recipe</a>
+        </div>
+        <div class="card">
+          <h3 class="autoShow2">🥦 Veggie Stir Fry</h3>
+          <p class="autoShow2">Quick and packed with vitamins.</p>
+          <a href="recipe.html#stir-fry" class="btn">View Recipe</a>
+        </div>
+        <div class="card">
+          <h3 class="autoShow2">🥣 Protein Porridge</h3>
+          <p class="autoShow2">Great for starting the day strong.</p>
+          <a href="recipe.html#porridge" class="btn">View Recipe</a>
+        </div>
       </div>
     </div>
-  </section>
+  </section>  
 
   <section id="contact" class="contact-section">
     <div class="container">
