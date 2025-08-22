@@ -27,7 +27,7 @@
     <div class="container">
       <h2>Zero Hunger: Every Person, Every Plate</h2>
       <p>We are on a mission to eliminate hunger and ensure healthy food access for all.</p>
-      <a href="#guides" class="btn">Get Involved</a>
+      <a href="#guides" class="btn" id="getInvolvedBtn">Get Involved</a>
     </div>
   </section>
 
@@ -1192,9 +1192,191 @@ THE SOFTWARE.
     </div>
   </section>
 
+  <!-- Donation Modal -->
+<!-- Donation Modal -->
+<div id="donationModal" class="donation-modal">
+  <div class="donation-content">
+    <span class="donation-close">&times;</span>
+    <h2>Support Zero Hunger 🌱</h2>
+    <p>Your donation helps provide meals and support farmers in hunger-affected areas.</p>
+
+    <div class="donation-options">
+      <button class="donate-amount">$5</button>
+      <button class="donate-amount">$10</button>
+      <button class="donate-amount">$25</button>
+      <button class="donate-amount">$50</button>
+    </div>
+
+    <p>Or choose your amount:</p>
+    <input type="number" min="1" placeholder="Enter amount" class="donation-input" />
+
+    <button class="donate-btn">Donate Now</button>
+
+    <p class="donation-note">
+      💡 100% of donations will go to trusted organizations working towards <strong>Zero Hunger</strong>  
+      to help families, farmers, and children in need.
+    </p>
+
+    <h3>Official Donation Links 🌍</h3>
+    <ul class="donation-links">
+      <li><a href="https://www.wfp.org/support-us/stories/donate" target="_blank">World Food Programme (WFP)</a></li>
+      <li><a href="https://donatenow.unicef.org/" target="_blank">UNICEF – Global Donations</a></li>
+      <li><a href="https://donate.redcross.org.my/" target="_blank">Red Crescent Malaysia</a></li>
+      <li><a href="https://www.actionagainsthunger.org/donate/" target="_blank">Action Against Hunger</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  /* Donation Modal Background */
+.donation-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* Modal Box */
+.donation-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Close Button */
+.donation-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* Buttons */
+.donation-options {
+  margin: 1em 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.donate-amount {
+  background: #007b5e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.donate-amount:hover {
+  background: #005f46;
+}
+
+.donation-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+.donate-btn {
+  background: #f0c000;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background: #d6a800;
+}
+
+.donation-note {
+  margin-top: 1em;
+  font-size: 14px;
+  color: #444;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #007b5e;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.donation-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.donation-links li {
+  margin: 6px 0;
+}
+
+.donation-links a {
+  color: #007b5e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.donation-links a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<script>
+  // Get modal & elements
+const donationModal = document.getElementById("donationModal");
+const donationClose = document.querySelector(".donation-close");
+const getInvolvedBtn = document.querySelector("#getInvolvedBtn"); // Your intro button
+
+// Open modal when clicking Get Involved
+getInvolvedBtn.addEventListener("click", () => {
+  donationModal.style.display = "flex";
+});
+
+// Close modal
+donationClose.addEventListener("click", () => {
+  donationModal.style.display = "none";
+});
+
+// Close when clicking outside the modal
+window.addEventListener("click", (e) => {
+  if (e.target === donationModal) {
+    donationModal.style.display = "none";
+  }
+});
+
+// Optional: Clicking preset amounts fills input
+document.querySelectorAll(".donate-amount").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".donation-input").value = btn.textContent.replace("$", "");
+  });
+});
+
+</script>
   <footer>
     <div class="container">
-      <p>© 2025 Zero Hunger. All rights reserved.</p>
+      <p>© 2025 NourishWise. All rights reserved.</p>
     </div>
   </footer>
 
