@@ -74,7 +74,7 @@
         <h4>Why It Matters:</h4>
         <p>Healthy soil = healthy food. Without smart farming, soil fertility declines, and food insecurity grows. Following these practices ensures long-term sustainability and supports ecosystems. 🌿</p>
         <p><em>Helpful links:</em>  
-          <a href="https://www.fao.org/agriculture" target="_blank">🌍 FAO Agriculture</a> ·
+          <!--<a href="https://www.fao.org/agriculture" target="_blank">🌍 FAO Agriculture</a> ·-->
           <a href="https://www.ipm.ucanr.edu/" target="_blank">🐛 Integrated Pest Management</a>
         </p>
       </div>
@@ -127,9 +127,186 @@
   </div>
 </section>
 
+  <!--last-->
+  <section class="parallax-section nutrition-section" style="background-image: url('images/nutrition-bg.jpg');">
+    <div class="container">
+      <h2>Guide on Reducing Food Waste 🚮</h2>
+  
+      <div class="button-row">
+        <button class="nutri-btn active" data-slide="0">🌍 Zero Waste Cooking</button>
+        <button class="nutri-btn" data-slide="1">📝 Smart Meal Planning</button>
+        <button class="nutri-btn" data-slide="2">🌱 Food Saving Tips</button>
+      </div>
+  
+      <div class="slide-content">
+  
+        <!-- Slide 1: Zero Waste Cooking -->
+        <div class="slide active">
+          <h3>🌍 Zero Waste Cooking</h3> 
+          <p>
+            Don’t throw away those veggie stems or stale bread — turn them into something delicious!  
+            Zero waste cooking helps save money, reduce landfill trash, and make meals more creative.  
+          </p>
+          <ul>
+            <li>🥕 <b>Veggie scraps → broth</b> (onion skins, carrot tops, herb stems).</li>
+            <li>🍞 <b>Stale bread → croutons or breadcrumbs</b>.</li>
+            <li>🍌 <b>Overripe bananas → smoothies, banana bread</b>.</li>
+            <li>🍊 <b>Citrus peels → homemade cleaning spray</b>.</li>
+          </ul>
+          <a href="#" class="learn-more">Learn More →</a>
+          <div class="more-content">
+            <p>Extra idea: Save potato peels → roast them for crunchy chips! 🥔✨</p>
+            <p>Every ingredient can have a second life. Even coffee grounds can be used for compost or skincare scrubs.  </p>
+            <p>📖 Learn more: 
+              <a href="https://www.lovefoodhatewaste.com/" target="_blank">Love Food Hate Waste</a>, 
+              <a href="https://foodprint.org/issues/the-problem-of-food-waste/" target="_blank">FoodPrint</a>
+            </p>
+          </div>
+        </div>
+  
+        <!-- Slide 2: Smart Meal Planning -->
+        <div class="slide">
+          <h3>📝 Smart Meal Planning</h3>
+          <p>
+            Planning meals ahead = less food in the bin. Use a simple weekly planner to track what you’ll cook and what you already have.  
+          </p>
+          <ul>
+            <li>🛒 Write a shopping list before going to the store.</li>
+            <li>🥗 Plan <b>3–4 meals per week</b> and use ingredients in multiple recipes.</li>
+            <li>📦 Freeze extra portions for later.</li>
+          </ul>
+          <a href="#" class="learn-more">Learn More →</a>
+          <div class="more-content">
+            <p>📥 Download free templates:  
+              <a href="https://www.canva.com/templates/?query=meal%20planner" target="_blank">Canva Meal Planners</a>,  
+              <a href="https://www.vertex42.com/ExcelTemplates/meal-planner.html" target="_blank">Vertex42 Weekly Meal Planner</a>
+            </p>
+            <p>
+              More tools to try: <a href="https://www.eatwell101.com/weekly-meal-plan-ideas" target="_blank">Weekly Meal Plan Ideas</a>  
+              <!--📘 Read: <a href="https://www.nhs.uk/live-well/eat-well/food-portion-sizes/" target="_blank">NHS: Portion Sizes</a>
+            </p>-->
+            <p>Tip: Have a “use me first” box in your fridge for foods that are about to expire!</p>
+          </div>
+        </div>
+  
+        <!-- Slide 3: Food Saving Tips -->
+        <div class="slide">
+          <h3>🌱 Food Saving Tips</h3>
+          <p>
+            Small daily habits can reduce waste at home and stretch your groceries further.  
+          </p>
+          <ul>
+            <li>🥬 <b>Regrow veggies:</b> lettuce, green onions & herbs in water.</li>
+            <li>🚰 <b>Store smart:</b> onions & potatoes separately last longer.</li>
+            <li>🧊 <b>Freeze wisely:</b> chop herbs, freeze in ice cube trays with olive oil.</li>
+            <li>📦 Store food properly (airtight jars, fridge zones).</li>
+            <li>📅 Follow "Use By" dates, but don’t panic over "Best Before".</li>
+            <li>🥗 Serve smaller portions to avoid plate waste.</li>
+          </ul>
+          <a href="#" class="learn-more">Learn More →</a>
+          <div class="more-content">
+            <p>📖 Learn more:  
+              <a href="https://www.epa.gov/recycle/reducing-wasted-food-home" target="_blank">EPA: Reducing Food Waste at Home</a>,  
+              <a href="https://www.fao.org/platform-food-loss-waste/en/" target="_blank">FAO Food Loss & Waste Platform</a>
+            </p>
+            <p>🌟 Tip: Label leftovers with the date you cooked them — no more “mystery containers” in the fridge.</p>
+            <p>
+              💡 30% of food waste happens at home. A simple change in storage and cooking can cut this in half.  
+              📖 More: <a href="https://www.fao.org/food-loss-and-food-waste/en/" target="_blank">FAO – Food Waste Facts</a>  
+            </p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+  <script>
+    /* =================== REDUCING FOOD WASTE (Learn More toggle) =================== */
+(function () {
+  const root = document.querySelector(".nutrition-section"); 
+  if (!root) return;
+
+  // Handle tab switching
+  const btns = root.querySelectorAll(".nutri-btn");
+  const slides = root.querySelectorAll(".slide");
+
+  btns.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      btns.forEach(b => b.classList.remove("active"));
+      slides.forEach(s => s.classList.remove("active"));
+
+      btn.classList.add("active");
+      slides[index].classList.add("active");
+    });
+  });
+
+  // Handle Learn More toggle with smooth slide
+  const learnMoreLinks = root.querySelectorAll(".learn-more");
+  learnMoreLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const moreContent = link.nextElementSibling;
+      if (!moreContent) return;
+
+      // Animate slide toggle
+      if (moreContent.classList.contains("open")) {
+        // closing
+        moreContent.style.maxHeight = moreContent.scrollHeight + "px";
+        setTimeout(() => {
+          moreContent.style.maxHeight = "0px";
+        }, 10);
+        moreContent.classList.remove("open");
+        link.textContent = "Learn More →";
+      } else {
+        // opening
+        moreContent.style.display = "block";
+        moreContent.style.maxHeight = moreContent.scrollHeight + "px";
+        moreContent.classList.add("open");
+        link.textContent = "Show Less ↑";
+      }
+    });
+  });
+})();
+
+  </script>
+
+<!--card-->
+<section class="flip-card-section">
+  <div class="container">
+    <div class="flip-card-grid">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-icon" style="font-size: 40px; margin: 0 auto 10px auto; text-align: center;">🍽️</div>
+            <h3>How do you eat more healthy?</h3>
+            <p>Simple ways to improve your diet with smart choices.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+          <div class="flip-card-back">
+            <p>Eat whole foods, avoid added sugars, read food labels, drink more water, and prioritize vegetables and fiber-rich meals daily.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-icon" style="font-size: 40px; margin: 0 auto 10px auto; text-align: center;">💰</div>
+            <h3>Budget-friendly healthy meal ideas</h3>
+            <p>Nutritious meals without overspending.</p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+          <div class="flip-card-back">
+            <p>Use bulk staples like rice and lentils, seasonal veggies, frozen fruits, and home-cooked recipes to stretch your food budget.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== Nutritional Guide ===== -->
-<section id="nutrition-guides" class="parallax-section nutrition-section" style="background-image: url('images/fruit.png');">
+<section id="nutrition-guides" class="nutrition-section" style="background-image: url('images/fruit.png');">
   <div class="container">
     <h2>Nutritional Guide 🥗🍎</h2>
 
@@ -145,40 +322,75 @@
       <!-- Slide 1 -->
       <div class="slide active">
         <h3>🍞 Macronutrients Explained Simply</h3>
-        <p>Macronutrients = Carbs ⚡ + Protein 💪 + Fats 🛡️.</p>
+        <p>Your body runs on 3 main energy sources:</p>
+        <ul>
+          <li><b>Carbohydrates 🍚</b> – Energy from rice, bread, fruits, oats.</li>
+          <li><b>Proteins 🍗</b> – Muscles & repair. Found in eggs, beans, fish, tofu.</li>
+          <li><b>Fats 🥑</b> – Brain & hormones. Found in nuts, olive oil, avocado.</li>
+        </ul>
+        <p><b>💡 Tip:</b> Balanced meal = 50% carbs, 25% protein, 25% fats.</p>    
         <a href="#" class="ng-learn">Learn More →</a>
         <div class="ng-more">
-          <p>Carbs fuel your brain, proteins build muscles, and fats keep your cells healthy.</p>
+          <p>
+            🔬 Carbs fuel your brain, protein helps recovery, fats keep hormones balanced.  
+            🥗 Example: Brown rice + grilled chicken + avocado.  
+            📖 More: <a href="https://www.hsph.harvard.edu/nutritionsource/carbohydrates/" target="_blank">Harvard Nutrition Source</a>
+          </p>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="slide">
-        <h3>👶👩‍🦳 Nutrition by Age</h3>
-        <p>Needs change as we grow 🕒.</p>
+        <h3>👶👩‍🦳 Nutrition for Different Age Groups</h3>
+        <p>Needs change at every stage of life:</p>
+        <ul>
+          <li><b>Kids 🧒</b> – Calcium & iron for growth.</li>
+          <li><b>Teens 🎒</b> – Protein + vitamin B for energy.</li>
+          <li><b>Adults 💼</b> – Fiber, hydration & portion control.</li>
+          <li><b>Elderly 👵</b> – Vitamin D, calcium, protein for strength.</li>
+        </ul>
         <a href="#" class="ng-learn">Learn More →</a>
         <div class="ng-more">
-          <p>Kids need calcium, adults need fiber, seniors need protein + hydration.</p>
+          <p>
+            🌟 Teens need extra fuel for growth.  
+            🌿 Adults should watch hidden sugars & salt.  
+            💪 Seniors benefit from protein-rich snacks.  
+            📘 Read: <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/" target="_blank">NHS EatWell Guide</a>
+          </p>
         </div>
       </div>
 
       <!-- Slide 3 (Balanced Meal Planning) -->
       <div class="slide">
         <h3>🥗 Balanced Meal Planning</h3>
-        <p>Think of your plate as: ½ veggies 🥦 + ¼ protein 🍗 + ¼ carbs 🍚.</p>
+        <p>Think of your plate as: ½ veggies 🥦 + ¼ protein 🍗 + ¼ carbs 🍚.
+          The “Plate Method” makes meal planning simple:
+        </p>
+        <ul>
+          <li>🥦 Half = Veggies & fruits</li>
+          <li>🍗 Quarter = Lean proteins</li>
+          <li>🍚 Quarter = Whole grains</li>
+          <li>💧 Water > Sugary drinks</li>
+        </ul>
         
         <div class="btn-row">
           <a href="#" class="ng-learn">Learn More →</a>
-          <button class="meal-plan-btn">📝 Try Meal Planner</button>
+          <button type="button" class="meal-plan-btn">📝 Try Meal Planner</button>
         </div>
 
         <div class="ng-more">
           <p>Plan meals ahead to save money and boost health 🌈.</p>
+          <p>
+            ✅ Balanced meals = stable energy, better focus, less snacking.  
+            🥑 Example: Salmon + quinoa + roasted broccoli.  
+            📖 More: <a href="https://www.myplate.gov/" target="_blank">USDA MyPlate</a>
+          </p>
         </div>
 
         <!-- Meal Planner Tool -->
         <div class="meal-planner hidden">
           <h4>🍴 Build Your Meal Plan</h4>
+
           <label>Choose Protein:</label>
           <select id="protein">
             <option>Chicken 🍗</option>
@@ -203,7 +415,7 @@
             <option>Mixed Salad 🥗</option>
           </select><br><br>
 
-          <button id="generateMeal">🍽️ Generate Meal</button>
+          <button id="generateMeal">🍽️ Generate</button>
 
           <div id="mealResult" class="meal-result"></div>
         </div>
@@ -211,207 +423,206 @@
 
       <!-- Slide 4 -->
       <div class="slide">
-        <h3>📊 Food Comparison Charts</h3>
-        <p>Compare foods easily 📈.</p>
+        <h3>📊 Comparison Charts of Common Foods</h3>
+        <p>See how everyday foods stack up:</p>
+        <ul>
+          <li>🍞 White Bread ❌ vs Whole Grain ✅</li>
+          <li>🍗 Chicken ✅ vs Tofu 🌱</li>
+          <li>🍚 Rice 🍚 vs Quinoa 🌾</li>
+        </ul>
+        <a href="#" class="ng-learn">Learn More →</a>
+        <div class="ng-more">
+          <p>
+            📌 Comparing foods helps avoid hidden unhealthy options.  
+            🍊 Juice vs 🍊 Whole fruit = sugar vs fiber!  
+            📖 More: <a href="https://fdc.nal.usda.gov/" target="_blank">USDA FoodData Central</a>
+          </p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-
-  <script>
-/* =================== FARMING GUIDES (scoped) =================== */
-(function () {
-  const root = document.getElementById('farming-guides');
-  if (!root) return;
-
-  const btns = root.querySelectorAll('.guide-btn');
-  const blocks = root.querySelectorAll('.guide-info-block');
-
-  // Ensure one active on load
-  if (![...blocks].some(b => b.classList.contains('active')) && blocks[0]) {
-    blocks[0].classList.add('active');
-    btns[0]?.classList.add('active');
-  }
-
-  // Tab switching
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.target;
-      if (!id) return;
-
-      btns.forEach(b => b.classList.toggle('active', b === btn));
-      blocks.forEach(b => b.classList.toggle('active', b.id === id));
-    });
-  });
-
-  // Learn More with smooth slide
-  root.querySelectorAll('.fg-learn-more').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const more = link.closest('.guide-info-block')?.querySelector('.fg-more');
-      if (!more) return;
-      slideToggle(more, 320);
-      link.textContent = more.classList.contains('open') ? 'Learn More →' : 'Show Less ↑';
-    });
-  });
-})();
-
-/* =================== NUTRITION GUIDES (scoped) =================== */
-(function () {
-  const root = document.getElementById('nutrition-guides');
-  if (!root) return;
-
-  const btns = root.querySelectorAll('.nutri-btn');
-  const slides = root.querySelectorAll('.slide');
-
-  // Ensure one active on load
-  if (![...slides].some(s => s.classList.contains('active')) && slides[0]) {
-    slides[0].classList.add('active');
-    btns[0]?.classList.add('active');
-  }
-
-  // Switch slides
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const idx = parseInt(btn.dataset.slide, 10);
-      if (Number.isNaN(idx)) return;
-      btns.forEach(b => b.classList.toggle('active', b === btn));
-      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
-    });
-  });
-
-  // Learn More with smooth slide
-  root.querySelectorAll('.ng-learn').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const more = link.closest('.slide')?.querySelector('.ng-more');
-      if (!more) return;
-      slideToggle(more, 320);
-      link.textContent = more.classList.contains('open') ? 'Learn More →' : 'Show Less ↑';
-    });
-  });
-})();
-
-/* =================== shared helper =================== */
-function slideToggle(element, duration = 300) {
-  if (!element) return;
-
-  const isOpen = element.classList.contains('open');
-  const startHeight = isOpen ? element.scrollHeight : 0;
-
-  if (!isOpen) {
-    element.style.display = 'block';
-    element.style.overflow = 'hidden';
-    element.style.maxHeight = '0px';
-  }
-
-  // force reflow
-  // eslint-disable-next-line no-unused-expressions
-  element.offsetHeight;
-
-  const endHeight = isOpen ? 0 : element.scrollHeight;
-
-  element.style.transition = `max-height ${duration}ms ease`;
-  element.style.maxHeight = `${endHeight}px`;
-
-  const onEnd = () => {
-    element.removeEventListener('transitionend', onEnd);
-    element.style.transition = '';
-    element.style.overflow = isOpen ? '' : 'visible';
-    if (isOpen) {
-      element.style.display = 'none';
-      element.classList.remove('open');
-      element.style.maxHeight = '';
-    } else {
-      element.classList.add('open');
-      element.style.maxHeight = 'none';
+<script>
+  /* =================== FARMING GUIDES (scoped) =================== */
+  (function () {
+    const root = document.getElementById('farming-guides');
+    if (!root) return;
+  
+    const btns = root.querySelectorAll('.guide-btn');
+    const blocks = root.querySelectorAll('.guide-info-block');
+  
+    if (![...blocks].some(b => b.classList.contains('active')) && blocks[0]) {
+      blocks[0].classList.add('active');
+      btns[0]?.classList.add('active');
     }
+  
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.target;
+        btns.forEach(b => b.classList.toggle('active', b === btn));
+        blocks.forEach(b => b.classList.toggle('active', b.id === id));
+      });
+    });
+  
+    root.querySelectorAll('.fg-learn-more').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const more = link.closest('.guide-info-block')?.querySelector('.fg-more');
+        if (!more) return;
+        slideToggle(more, 320);
+        link.textContent = more.classList.contains('open') ? 'Learn More →' : 'Show Less ↑';
+      });
+    });
+  })();
+  
+  /* =================== NUTRITION GUIDES (scoped) =================== */
+  (function () {
+    const root = document.getElementById('nutrition-guides');
+    if (!root) return;
+  
+    const btns = root.querySelectorAll('.nutri-btn');
+    const slides = root.querySelectorAll('.slide');
+  
+    if (![...slides].some(s => s.classList.contains('active')) && slides[0]) {
+      slides[0].classList.add('active');
+      btns[0]?.classList.add('active');
+    }
+  
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.slide, 10);
+        btns.forEach(b => b.classList.toggle('active', b === btn));
+        slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      });
+    });
+  
+    root.querySelectorAll('.ng-learn').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const more = link.closest('.slide')?.querySelector('.ng-more');
+        if (!more) return;
+        slideToggle(more, 320);
+        link.textContent = more.classList.contains('open') ? 'Learn More →' : 'Show Less ↑';
+      });
+    });
+  })();
+  
+  /* =================== MEAL PLANNER =================== */
+(function () {
+  const planner = document.querySelector('#nutrition-guides .meal-planner');
+  if (!planner) return;
+
+  const toggleBtn = planner.closest('.slide').querySelector('.meal-plan-btn');
+  const generateBtn = planner.querySelector('#generateMeal');
+  const resultDiv = planner.querySelector('#mealResult');
+
+  // Show/hide planner
+  toggleBtn.addEventListener("click", () => {
+    planner.classList.toggle("hidden");
+    resultDiv.innerHTML = "";
+  });
+
+  // Recipe pools
+  const recipes = {
+    Chicken: [
+      {
+        title: "Grilled Chicken Salad 🥗",
+        ingredients: ["100g chicken breast", "Mixed greens", "Cherry tomatoes", "Olive oil", "Lemon juice"],
+        steps: ["Grill chicken until cooked through.", "Toss vegetables with olive oil & lemon juice.", "Slice chicken & serve on top."],
+        tip: "Lean proteins + greens = perfect post-workout lunch 💪"
+      },
+      {
+        title: "Chicken Stir Fry with Veggies 🍜",
+        ingredients: ["Chicken breast", "Broccoli 🥦", "Carrots 🥕", "Soy sauce", "Garlic"],
+        steps: ["Slice chicken & veggies.", "Stir fry garlic, then add chicken.", "Add veggies & soy sauce, cook until tender."],
+        tip: "Quick, easy, and packed with flavor 🌟"
+      }
+    ],
+    Tofu: [
+      {
+        title: "Crispy Tofu Bowl 🌱",
+        ingredients: ["200g firm tofu", "Rice 🍚", "Spinach", "Sesame oil", "Soy sauce"],
+        steps: ["Cube & fry tofu until golden.", "Steam spinach lightly.", "Serve over rice with soy-sesame drizzle."],
+        tip: "Great plant-based protein boost 💚"
+      }
+    ],
+    Fish: [
+      {
+        title: "Baked Salmon with Veggies 🐟",
+        ingredients: ["1 salmon fillet", "Broccoli 🥦", "Potatoes 🥔", "Olive oil", "Herbs"],
+        steps: ["Season salmon & veggies.", "Bake everything at 180°C for 20 mins.", "Serve hot with lemon."],
+        tip: "Omega-3s are excellent for heart health ❤️"
+      }
+    ],
+    Beans: [
+      {
+        title: "Bean Chili 🍲",
+        ingredients: ["Kidney beans", "Tomato sauce", "Onions", "Garlic", "Chili powder"],
+        steps: ["Sauté onions & garlic.", "Add beans & tomato sauce.", "Simmer with spices for 20 mins."],
+        tip: "High fiber keeps you full longer 🌾"
+      }
+    ]
   };
-  element.addEventListener('transitionend', onEnd);
-}
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  const mealPlanBtn = document.querySelector(".meal-plan-btn");
-  const mealPlanner = document.querySelector(".meal-planner");
-  const generateBtn = document.getElementById("generateMeal");
-  const mealResult = document.getElementById("mealResult");
 
-  // Toggle meal planner visibility
-  mealPlanBtn.addEventListener("click", () => {
-    mealPlanner.classList.toggle("hidden");
-  });
+  generateBtn.addEventListener('click', () => {
+    const protein = planner.querySelector('#protein').value.split(" ")[0]; // e.g. "Chicken"
+    const carb = planner.querySelector('#carb').value;
+    const veggie = planner.querySelector('#veggie').value;
 
-  // Generate meal suggestion
-  generateBtn.addEventListener("click", () => {
-    const protein = document.getElementById("protein").value;
-    const carb = document.getElementById("carb").value;
-    const veggie = document.getElementById("veggie").value;
+    const pool = recipes[protein] || recipes.Chicken;
+    const chosen = pool[Math.floor(Math.random() * pool.length)];
 
-    mealResult.innerHTML = `
-      ✅ Your balanced plate is ready:<br>
-      🥦 Veggies: <strong>${veggie}</strong><br>
-      🍗 Protein: <strong>${protein}</strong><br>
-      🍚 Carb: <strong>${carb}</strong><br><br>
-      🧾 <em>Tip: Fill half your plate with veggies for fiber & vitamins!</em>
+    resultDiv.innerHTML = `
+      <h3>🍽️ ${chosen.title}</h3>
+      <p><strong>🥦 Veggie Choice:</strong> ${veggie}</p>
+      <p><strong>🍚 Carb Choice:</strong> ${carb}</p>
+
+      <h4>🛒 Ingredients:</h4>
+      <ul>${chosen.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
+
+      <h4>👩‍🍳 Instructions:</h4>
+      <ol>${chosen.steps.map(s => `<li>${s}</li>`).join("")}</ol>
+
+      <p><em>${chosen.tip}</em></p>
     `;
+    resultDiv.style.display = "block";
   });
-});*/
+})();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const mealBtn = document.querySelector(".meal-plan-btn");
-  const planner = document.querySelector(".meal-planner");
-  const generateBtn = document.getElementById("generateMeal");
-  const mealResult = document.getElementById("mealResult");
-
-  if (mealBtn && planner) {
-    mealBtn.addEventListener("click", () => {
-      planner.classList.toggle("hidden");
-      mealResult.innerHTML = ""; // reset when reopened
-    });
+  /* =================== SLIDE TOGGLE HELPER =================== */
+  function slideToggle(element, duration = 300) {
+    if (!element) return;
+    const isOpen = element.classList.contains('open');
+    const startHeight = isOpen ? element.scrollHeight : 0;
+    if (!isOpen) {
+      element.style.display = 'block';
+      element.style.overflow = 'hidden';
+      element.style.maxHeight = '0px';
+    }
+    element.offsetHeight; // force reflow
+    const endHeight = isOpen ? 0 : element.scrollHeight;
+    element.style.transition = `max-height ${duration}ms ease`;
+    element.style.maxHeight = `${endHeight}px`;
+  
+    const onEnd = () => {
+      element.removeEventListener('transitionend', onEnd);
+      element.style.transition = '';
+      element.style.overflow = isOpen ? '' : 'visible';
+      if (isOpen) {
+        element.style.display = 'none';
+        element.classList.remove('open');
+        element.style.maxHeight = '';
+      } else {
+        element.classList.add('open');
+        element.style.maxHeight = 'none';
+      }
+    };
+    element.addEventListener('transitionend', onEnd);
   }
-
-  if (generateBtn) {
-    generateBtn.addEventListener("click", () => {
-      const protein = document.getElementById("protein").value;
-      const carb = document.getElementById("carb").value;
-      const veggie = document.getElementById("veggie").value;
-
-      mealResult.innerHTML = `
-        🍽️ <strong>Your 1-Day Meal Plan</strong><br><br>
-
-        🌅 <strong>Breakfast</strong><br>
-        • Whole Grain Toast with scrambled ${protein}<br>
-        • Side of fresh fruit 🍌🍓<br><br>
-
-        ☀️ <strong>Lunch</strong><br>
-        • Grilled ${protein} with ${veggie} salad 🥗<br>
-        • Small serving of ${carb}<br><br>
-
-        🌙 <strong>Dinner</strong><br>
-        • Stir-fried ${veggie} with ${protein}<br>
-        • Served over ${carb}<br><br>
-
-        💡 <em>Tip:</em> Prep extra ${protein} and ${veggie} at dinner — they make great leftovers for lunchboxes tomorrow!
-      `;
-    });
-  }
-});
-
-
-// Meal Planner toggle
-const mealBtn = document.querySelector(".meal-plan-btn");
-const planner = document.querySelector(".meal-planner");
-
-if (mealBtn && planner) {
-  mealBtn.addEventListener("click", () => {
-    planner.classList.toggle("open");
-  });
-}
-
-
   </script>
+  
   
  <!-- 
   <section class="parallax-section nutrition-section" style="background-image: url('images/fruit.png');">
@@ -524,74 +735,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 -->
 
-  <section class="flip-card-section">
-    <div class="container">
-      <div class="flip-card-grid">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="card-icon" style="font-size: 40px; margin: 0 auto 10px auto; text-align: center;">🍽️</div>
-              <h3>How do you eat more healthy?</h3>
-              <p>Simple ways to improve your diet with smart choices.</p>
-              <a href="#" class="learn-more">Learn More →</a>
-            </div>
-            <div class="flip-card-back">
-              <p>Eat whole foods, avoid added sugars, read food labels, drink more water, and prioritize vegetables and fiber-rich meals daily.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="card-icon" style="font-size: 40px; margin: 0 auto 10px auto; text-align: center;">💰</div>
-              <h3>Budget-friendly healthy meal ideas</h3>
-              <p>Nutritious meals without overspending.</p>
-              <a href="#" class="learn-more">Learn More →</a>
-            </div>
-            <div class="flip-card-back">
-              <p>Use bulk staples like rice and lentils, seasonal veggies, frozen fruits, and home-cooked recipes to stretch your food budget.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--last-->
-  <section class="parallax-section nutrition-section" style="background-image: url('images/nutrition-bg.jpg');">
-    <div class="container">
-      <h2>Guide on reducing food waste 🚮</h2>
-
-      <div class="button-row">
-        <button class="nutri-btn" data-slide="0">Make Zero Waste</button>
-        <button class="nutri-btn" data-slide="1">Printable Meal Plan</button>
-        <button class="nutri-btn" data-slide="2">Tips on farming</button>
-      </div>
-
-      <div class="slide-content">
-        <div class="slide active">
-          <h3>Make Zero Waste <a href="url">Recipes</a></h3> 
-          <p>Learn about carbohydrates, proteins, and fats — their roles in the body, recommended daily amounts, and how to get them from whole foods.</p>
-          <a href="#" class="learn-more">Learn More →</a>
-        </div>
-        <div class="slide">
-          <h3>Printable Meal Plan</h3>
-          <p>Discover how nutritional needs vary for children, adults, and the elderly, and how to adapt meals for each group.</p>
-          <a href="#" class="learn-more">Learn More →</a>
-        </div>
-        <div class="slide">
-          <h3>Tips on farming</h3>
-          <p>Tips and sample plates to ensure you're getting enough nutrients in every meal, without overcomplicating your diet.</p>
-          <a href="#" class="learn-more">Learn More →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <div class="container">
-      <p>© 2025 Zero Hunger. All rights reserved.</p>
+      <p>© 2025 NourishWise. All rights reserved.</p>
     </div>
   </footer>
 </body>
