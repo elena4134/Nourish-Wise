@@ -110,5 +110,146 @@
       "Displacement of rural farmers",
       "Lack of infrastructure for food storage and transport"
     ]
+  },
+    "Brazil": {
+      "flag": "https://flagcdn.com/w320/br.png",
+      "stats": [
+        "33 million people face hunger.",
+        "Rural poor most affected by rising food costs."
+      ],
+      "deaths": "Child malnutrition deaths rising in northern regions.",
+      "access": "Urban slums face inconsistent food access.",
+      "zeroHungerIssues": [
+        "Deforestation impacts farming",
+        "High inequality",
+        "Rising food prices"
+      ]
+    },
+    "United States": {
+      "flag": "https://flagcdn.com/w320/us.png",
+      "stats": [
+        "34 million people are food insecure.",
+        "Disproportionate impact on minorities and rural areas."
+      ],
+      "deaths": "Tens of thousands of preventable hunger-linked deaths yearly.",
+      "access": "Food deserts limit healthy options in many communities.",
+      "zeroHungerIssues": [
+        "High food waste",
+        "Income inequality",
+        "Urban food deserts"
+      ]
+    },
+    "Mexico": {
+      "flag": "https://flagcdn.com/w320/mx.png",
+      "stats": [
+        "28 million face moderate food insecurity.",
+        "Indigenous communities most affected."
+      ],
+      "deaths": "Malnutrition persists in rural villages.",
+      "access": "Urban areas better served than rural mountains.",
+      "zeroHungerIssues": [
+        "Rural poverty",
+        "Climate shocks",
+        "Market inequality"
+      ]
+    },
+    "South Africa": {
+      "flag": "https://flagcdn.com/w320/za.png",
+      "stats": [
+        "11 million people food insecure.",
+        "Children under 5 face high stunting rates."
+      ],
+      "deaths": "Thousands of preventable child deaths yearly.",
+      "access": "Rural provinces hardest hit.",
+      "zeroHungerIssues": [
+        "Inequality",
+        "Unemployment",
+        "Climate shocks"
+      ]
+    },
+    "Pakistan": {
+      "flag": "https://flagcdn.com/w320/pk.png",
+      "stats": [
+        "37% of households face food insecurity.",
+        "Recent floods destroyed large crop areas."
+      ],
+      "deaths": "Child malnutrition contributes to 1/3 of child deaths.",
+      "access": "Flooded areas cut off from food markets.",
+      "zeroHungerIssues": [
+        "Floods & climate change",
+        "High population growth",
+        "Rural poverty"
+      ]
+    },
+    "Indonesia": {
+      "flag": "https://flagcdn.com/w320/id.png",
+      "stats": [
+        "25 million food insecure.",
+        "Remote islands face supply shortages."
+      ],
+      "deaths": "Child stunting remains widespread.",
+      "access": "Urban-rural divide in nutrition access.",
+      "zeroHungerIssues": [
+        "Geographic isolation",
+        "Climate risks (floods, volcanoes)",
+        "Dependence on rice"
+      ]
+    },
+    "China": {
+      "flag": "https://flagcdn.com/w320/cn.png",
+      "stats": [
+        "9 million undernourished despite progress.",
+        "Rural west lags behind coastal regions."
+      ],
+      "deaths": "Improved but still thousands of child deaths yearly.",
+      "access": "Urban access much better than rural minority regions.",
+      "zeroHungerIssues": [
+        "Urban-rural gap",
+        "Climate change impact",
+        "Food waste"
+      ]
+    },
+    "Australia": {
+      "flag": "https://flagcdn.com/w320/au.png",
+      "stats": [
+        "1 in 6 adults experienced food insecurity in past year.",
+        "Remote Aboriginal communities most affected."
+      ],
+      "deaths": "Low national rates, but severe in remote areas.",
+      "access": "Strong system, but unequal rural access.",
+      "zeroHungerIssues": [
+        "Remote isolation",
+        "High food costs in rural areas",
+        "Waste in urban centers"
+      ]
+    },
+    "United Kingdom": {
+      "flag": "https://flagcdn.com/w320/gb.png",
+      "stats": [
+        "10 million people food insecure.",
+        "Cost-of-living crisis worsens hunger."
+      ],
+      "deaths": "Rising hunger-related deaths in poor households.",
+      "access": "Food bank dependence growing.",
+      "zeroHungerIssues": [
+        "High food prices",
+        "Austerity policies",
+        "Food bank reliance"
+      ]
+    },
+    "Germany": {
+      "flag": "https://flagcdn.com/w320/de.png",
+      "stats": [
+        "2 million people rely on food banks.",
+        "Low hunger overall but inequality rising."
+      ],
+      "deaths": "Rare but food poverty still impacts migrants.",
+      "access": "Strong food supply, unequal affordability.",
+      "zeroHungerIssues": [
+        "Food waste",
+        "Migrant poverty",
+        "Energy-driven food price hikes"
+      ]
+    }
   }
-}
+  
