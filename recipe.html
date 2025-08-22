@@ -71,6 +71,7 @@
 
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="logo"><a href="index.html">NourishWise</a></div>
@@ -80,48 +81,292 @@
         <li><a href="guides.html">Guides</a></li>
         <li><a href="recipe.html" class="active">Recipe</a></li>
         <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Recipe Page Layout -->
-  <section id="local-recipes" class="recipe-section">
-    <div class="container">
-      <h2>🍴 Locally Sourced Recipes</h2>
-      <div class="recipe-cards">
-        
-        <!-- Recipe Card -->
-        <div class="recipe-card" data-recipe="lentils">
-          <img src="images/friedrice.jpg" alt="Rice & Lentils">
-          <div class="recipe-info">
-            <h3>Rice & Lentils</h3>
-            <p>Nutritious, affordable, and simple to prepare.</p>
-          </div>
+<!-- Recipe Page Layout -->
+<section id="local-recipes" class="recipe-section">
+  <div class="container">
+    <h2>🍴 Locally Sourced Recipes</h2>
+    <div class="recipe-cards">
+      
+      <!-- Recipe Card -->
+      <div class="recipe-card" data-recipe="lentils">
+        <img src="images/friedrice.jpg" alt="Rice & Lentils">
+        <div class="recipe-info">
+          <h3>Rice & Lentils</h3>
+          <p>Nutritious, affordable, and simple to prepare.</p>
         </div>
-  
-        <!-- Recipe Card -->
-        <div class="recipe-card" data-recipe="stirfry">
-          <img src="images/vege.png" alt="Veggie Stir Fry">
-          <div class="recipe-info">
-            <h3>Veggie Stir Fry</h3>
-            <p>Quick, colorful, and packed with vitamins.</p>
-          </div>
-        </div>
-  
-        <!-- Recipe Card -->
-        <div class="recipe-card" data-recipe="porridge">
-          <img src="images/broth.jpg" alt="Protein Porridge">
-          <div class="recipe-info">
-            <h3>Protein Porridge</h3>
-            <p>A hearty breakfast to start your day strong.</p>
-          </div>
-        </div>
-  
       </div>
+
+      <!-- Recipe Card -->
+      <div class="recipe-card" data-recipe="stirfry">
+        <img src="images/vegestirfry.png" alt="Veggie Stir Fry">
+        <div class="recipe-info">
+          <h3>Veggie Stir Fry</h3>
+          <p>Quick, colorful, and packed with vitamins.</p>
+        </div>
+      </div>
+
+      <!-- Recipe Card -->
+      <div class="recipe-card" data-recipe="porridge">
+        <img src="images/proteinporridge.jpg" alt="Protein Porridge">
+        <div class="recipe-info">
+          <h3>Protein Porridge</h3>
+          <p>A hearty breakfast to start your day strong.</p>
+        </div>
+      </div>
+
+      <!-- NEW: Recipe Card 1 -->
+      <div class="recipe-card" data-recipe="curry">
+        <img src="images/vegetablecurry.jpg" alt="Vegetable Curry">
+        <div class="recipe-info">
+          <h3>Vegetable Curry</h3>
+          <p>Rich in flavor, made with local seasonal produce.</p>
+        </div>
+      </div>
+
+      <!-- NEW: Recipe Card 2 -->
+      <div class="recipe-card" data-recipe="salad">
+        <img src="images/gardensalad.webp" alt="Fresh Garden Salad">
+        <div class="recipe-info">
+          <h3>Fresh Garden Salad</h3>
+          <p>Crisp veggies with a simple homemade dressing.</p>
+        </div>
+      </div>
+
+      <!-- NEW: Recipe Card 3 -->
+      <div class="recipe-card" data-recipe="soup">
+        <img src="images/soup.jpg" alt="Pumpkin Soup">
+        <div class="recipe-info">
+          <h3>Pumpkin Soup</h3>
+          <p>Comforting, nutritious, and budget-friendly.</p>
+        </div>
+      </div>
+      
+      <!-- Recipe Modal -->
+      <div id="recipeModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <div id="modalContent"></div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
   
+  <style>
+    .recipe-card {
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.recipe-card .recipe-info {
+  padding: 1em;
+  background: #fff;
+  text-align: center;
+}
+.recipe-card:hover {
+  transform: scale(1.03);
+}
+
+/* Overlay effect */
+.recipe-card::after {
+  content: "View Recipe";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.recipe-card:hover::after {
+  opacity: 1;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+}
+.modal-content h2 {
+  margin-top: 0;
+}
+.close-btn {
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+  </style>
+<script>
+  const recipes = {
+    lentils: {
+      title: "Rice & Lentils",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>1 cup rice</li>
+          <li>1/2 cup lentils</li>
+          <li>1 onion, 2 garlic cloves</li>
+          <li>Salt, pepper, spices</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Cook rice separately.</li>
+          <li>Boil lentils with onion & garlic until soft.</li>
+          <li>Mix with rice, season, and serve warm.</li>
+        </ol>
+      `
+    },
+    stirfry: {
+      title: "Veggie Stir Fry",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>Mixed seasonal vegetables</li>
+          <li>2 tbsp soy sauce</li>
+          <li>1 clove garlic</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Sauté garlic in oil.</li>
+          <li>Add chopped veggies, stir-fry 5 minutes.</li>
+          <li>Add soy sauce and serve with rice or noodles.</li>
+        </ol>
+      `
+    },
+    porridge: {
+      title: "Protein Porridge",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>1/2 cup oats</li>
+          <li>1 cup milk or water</li>
+          <li>1 boiled egg or nuts</li>
+          <li>Fruit toppings (banana, apple, etc.)</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Cook oats in milk/water until creamy.</li>
+          <li>Add protein (egg/nuts).</li>
+          <li>Top with fruits and serve warm.</li>
+        </ol>
+      `
+    },
+    curry: {
+      title: "Vegetable Curry",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>2 cups mixed seasonal vegetables</li>
+          <li>1 onion, 2 garlic cloves, ginger</li>
+          <li>1 cup coconut milk</li>
+          <li>2 tbsp curry powder</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Sauté onion, garlic, and ginger until fragrant.</li>
+          <li>Add curry powder and stir for 1 min.</li>
+          <li>Add vegetables and coconut milk, simmer until cooked.</li>
+        </ol>
+      `
+    },
+    salad: {
+      title: "Fresh Garden Salad",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>Mixed leafy greens</li>
+          <li>Tomatoes, cucumbers, carrots</li>
+          <li>2 tbsp olive oil, 1 tbsp lemon juice</li>
+          <li>Salt & pepper</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Wash and chop all vegetables.</li>
+          <li>Mix in a bowl with olive oil and lemon juice.</li>
+          <li>Season lightly and serve fresh.</li>
+        </ol>
+      `
+    },
+    soup: {
+      title: "Pumpkin Soup",
+      content: `
+        <strong>Ingredients:</strong>
+        <ul>
+          <li>500g pumpkin</li>
+          <li>1 onion, 2 garlic cloves</li>
+          <li>3 cups vegetable stock</li>
+          <li>Salt & pepper</li>
+        </ul>
+        <strong>Steps:</strong>
+        <ol>
+          <li>Sauté onion and garlic.</li>
+          <li>Add pumpkin cubes and vegetable stock.</li>
+          <li>Simmer until pumpkin is soft, then blend until smooth.</li>
+        </ol>
+      `
+    }
+  };
+
+const modal = document.getElementById('recipeModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalContent = document.getElementById('modalContent');
+const closeBtn = document.querySelector('.close-btn');
+
+document.querySelectorAll('.recipe-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const key = card.dataset.recipe;
+    if (recipes[key]) {
+      modalTitle.innerText = recipes[key].title;
+      modalContent.innerHTML = recipes[key].content;
+      modal.style.display = "flex";
+    }
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+
+</script>
+
   <!-- Recipe Modal -->
   <div id="recipeModal" class="modal">
     <div class="modal-content">
@@ -443,6 +688,17 @@
       </div>
     </div>
   </div>
+  <!-- Low-Cost Recipe Modal -->
+<div id="lowCostModal" class="modal">
+  <div class="modal-content">
+    <span id="lowCostCloseBtn" class="close-btn">&times;</span>
+    <h2 id="lowCostTitle"></h2>
+    <div id="lowCostContent"></div>
+    <p id="lowCostPrice" class="price-tag"></p>
+  </div>
+</div>
+
+
 </section>
 
 <style>
@@ -503,17 +759,159 @@
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+/* Overlay for low-cost recipes */
+.lowcost-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* full black transparent */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* make sure it's above recipe of the week */
+}
+
+/* Centered popup */
+.lowcost-popup {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Force center */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Close button */
+.lowcost-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Estimated cost – move to bottom */
+.lowcost-cost {
+  margin-top: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b5e20; /* dark green */
+  background: #e8f5e9; /* soft green background */
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+}
+
 </style>
 
 <script>
-document.querySelectorAll('.low-cost-card').forEach(card => {
-  card.addEventListener('click', () => {
-    document.querySelectorAll('.low-cost-card').forEach(c => {
-      if (c !== card) c.classList.remove('show-details');
-    });
-    card.classList.toggle('show-details');
+// Recipes + price data
+const lowCostRecipes = {
+  friedrice: {
+    title: "Basic Fried Rice",
+    content: `
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>1 cup cooked rice</li>
+        <li>1 egg (optional)</li>
+        <li>Mixed vegetables</li>
+        <li>Soy sauce, oil</li>
+      </ul>
+      <h4>Steps:</h4>
+      <ol>
+        <li>Heat oil in a pan, fry egg and veggies.</li>
+        <li>Add rice and soy sauce, stir well.</li>
+        <li>Cook for 2-3 minutes and serve hot.</li>
+      </ol>
+    `,
+    price: "💰 Estimated Cost: $1.50 – $2.00"
+  },
+  soup: {
+    title: "Potato & Carrot Soup",
+    content: `
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>2 potatoes</li>
+        <li>2 carrots</li>
+        <li>1 onion, water, salt</li>
+      </ul>
+      <h4>Steps:</h4>
+      <ol>
+        <li>Chop veggies, sauté onion.</li>
+        <li>Add potatoes, carrots, water.</li>
+        <li>Boil until soft, mash slightly, season.</li>
+      </ol>
+    `,
+    price: "💰 Estimated Cost: $2.50 – $3.00"
+  },
+  omelet: {
+    title: "Simple Veg Omelette",
+    content: `
+      <h4>Ingredients:</h4>
+      <ul>
+        <li>2 eggs</li>
+        <li>Chopped veggies</li>
+        <li>Salt, pepper, oil</li>
+      </ul>
+      <h4>Steps:</h4>
+      <ol>
+        <li>Beat eggs with veggies and seasonings.</li>
+        <li>Cook in pan until firm.</li>
+        <li>Serve with rice or bread.</li>
+      </ol>
+    `,
+    price: "💰 Estimated Cost: $1.00 – $1.50"
+    
+  }
+  
+};
+
+// Modal elements
+const lowCostModal = document.getElementById("lowCostModal");
+const lowCostTitle = document.getElementById("lowCostTitle");
+const lowCostContent = document.getElementById("lowCostContent");
+const lowCostPrice = document.getElementById("lowCostPrice");
+const lowCostCloseBtn = document.getElementById("lowCostCloseBtn");
+
+// Card click
+document.querySelectorAll(".low-cost-card").forEach(card => {
+  card.addEventListener("click", () => {
+    let recipeKey = "friedrice"; // default
+    if (card.querySelector("h3").textContent.includes("Fried Rice")) recipeKey = "friedrice";
+    else if (card.querySelector("h3").textContent.includes("Soup")) recipeKey = "soup";
+    else if (card.querySelector("h3").textContent.includes("Omelette")) recipeKey = "omelet";
+
+    const recipe = lowCostRecipes[recipeKey];
+    lowCostTitle.textContent = recipe.title;
+    lowCostContent.innerHTML = recipe.content;
+    lowCostPrice.textContent = recipe.price;
+
+    lowCostModal.style.display = "block";
   });
 });
+
+// Close modal
+lowCostCloseBtn.addEventListener("click", () => {
+  lowCostModal.style.display = "none";
+});
+window.addEventListener("click", (e) => {
+  if (e.target === lowCostModal) {
+    lowCostModal.style.display = "none";
+  }
+});
+
 </script>
 
 <!--recipe of the week-->
@@ -614,41 +1012,175 @@ header nav a.active {
 </style>
 
 <script>
-const weeklyRecipes = [
-  {
-    title: "Nasi Lemak",
-    img: "images/nasi-lemak.jpg",
-    desc: "Ingredients: Rice, coconut milk, sambal, egg, cucumber<br>Steps: Cook rice in coconut milk, prepare sambal sauce, serve with sides."
-  },
-  {
-    title: "Fried Rice",
-    img: "images/friedrice.jpg",
-    desc: "Ingredients: Rice, egg, veggies, soy sauce<br>Steps: Stir-fry all ingredients until well cooked."
-  },
-  {
-    title: "Potato Soup",
-    img: "images/potato-soup.jpg",
-    desc: "Ingredients: Potatoes, carrots, onion<br>Steps: Boil all, mash slightly, season to taste."
-  },
-  {
-    title: "Veg Omelette",
-    img: "images/omelette.jpg",
-    desc: "Ingredients: Eggs, veggies, seasoning<br>Steps: Beat eggs, add veggies, cook in pan."
-  }
-];
-
-const today = new Date();
-const weekNumber = Math.floor(today.getTime() / (7 * 24 * 60 * 60 * 1000));
-const recipeIndex = weekNumber % weeklyRecipes.length;
-const selectedRecipe = weeklyRecipes[recipeIndex];
-
-document.getElementById('weeklyRecipeTitle').innerText = selectedRecipe.title;
-document.getElementById('weeklyRecipeImg').src = selectedRecipe.img;
-document.getElementById('weeklyRecipeDesc').innerHTML = selectedRecipe.desc;
-</script>
+  const weeklyRecipes = [
+    {
+      title: "Nasi Lemak",
+      img: "images/nasi-lemak.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 2 cups rice<br>
+        • 1 cup coconut milk 🥥<br>
+        • 2 boiled eggs 🥚<br>
+        • Sambal chili paste 🌶️<br>
+        • Fried anchovies (ikan bilis)<br>
+        • Sliced cucumber 🥒<br>
+        • Roasted peanuts 🥜<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Wash rice and cook with coconut milk + pandan leaves until fragrant.<br>
+        2. Prepare sambal by frying chili paste with onion and anchovies.<br>
+        3. Serve rice with sambal, egg, cucumber, peanuts, and fried anchovies.<br><br>
+  
+        <strong>Cooking Tip:</strong> Use pandan leaves in the rice and caramelize sambal slowly for a richer taste.
+      `
+    },
+    {
+      title: "Fried Rice",
+      img: "images/friedrice.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 2 cups leftover rice 🍚<br>
+        • 1 egg 🥚<br>
+        • Mixed veggies (carrots, peas, corn) 🥕🌽<br>
+        • 2 tbsp soy sauce<br>
+        • Garlic and onion 🧄🧅<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Heat oil in a wok, scramble egg, and set aside.<br>
+        2. Stir-fry onion and garlic until golden.<br>
+        3. Add veggies, rice, and soy sauce, stir well.<br>
+        4. Mix scrambled egg back in before serving.<br><br>
+  
+        <strong>Cooking Tip:</strong> Use day-old rice for the best texture — it prevents clumping.
+      `
+    },
+    {
+      title: "Potato Soup",
+      img: "images/potato-soup.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 3 medium potatoes 🥔<br>
+        • 2 carrots 🥕<br>
+        • 1 onion 🧅<br>
+        • 4 cups water or broth 🥣<br>
+        • Salt & pepper<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Peel and chop potatoes, carrots, and onion.<br>
+        2. Sauté onion in a little butter or oil.<br>
+        3. Add veggies and broth, simmer until soft.<br>
+        4. Mash slightly for a creamy texture.<br><br>
+  
+        <strong>Cooking Tip:</strong> Add a splash of milk or cream for a richer flavor.
+      `
+    },
+    {
+      title: "Veg Omelette",
+      img: "images/omelette.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 2 eggs 🥚<br>
+        • Chopped veggies (onion, tomato, spinach, bell pepper) 🥬🍅<br>
+        • Salt & pepper<br>
+        • 1 tbsp oil<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Beat eggs with salt and pepper.<br>
+        2. Heat oil in a pan, sauté veggies lightly.<br>
+        3. Pour eggs over veggies, cook until set.<br>
+        4. Fold omelette and serve with bread or rice.<br><br>
+  
+        <strong>Cooking Tip:</strong> Whisk in 1 tbsp of milk for extra fluffiness.
+      `
+    },
+    {
+      title: "Chickpea Curry",
+      img: "images/chickpea-curry.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 1 can chickpeas (or boiled)<br>
+        • 1 onion 🧅, 2 garlic cloves 🧄<br>
+        • 2 tomatoes 🍅<br>
+        • Curry powder, salt, oil<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Sauté onion and garlic until golden.<br>
+        2. Add tomatoes, cook until soft.<br>
+        3. Add chickpeas + curry powder, simmer 10 mins.<br>
+        4. Serve with rice or flatbread.<br><br>
+  
+        <strong>Cooking Tip:</strong> Add coconut milk for a creamy, rich curry.
+      `
+    },
+    {
+      title: "Stuffed Bell Peppers",
+      img: "images/stuffed-peppers.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 4 bell peppers 🌶️<br>
+        • 1 cup cooked rice 🍚<br>
+        • ½ cup beans or minced meat<br>
+        • Tomato sauce<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Cut tops off peppers, scoop out seeds.<br>
+        2. Mix rice, beans/meat, and tomato sauce.<br>
+        3. Stuff peppers and bake at 180°C for 20 mins.<br><br>
+  
+        <strong>Cooking Tip:</strong> Top with cheese before baking for extra flavor.
+      `
+    },
+    {
+      title: "Lentil Stew",
+      img: "images/lentil-stew.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 1 cup lentils<br>
+        • 1 onion 🧅, 2 carrots 🥕<br>
+        • 2 tomatoes 🍅<br>
+        • 4 cups broth 🥣<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Sauté onion and carrots.<br>
+        2. Add tomatoes, lentils, and broth.<br>
+        3. Simmer 25–30 mins until lentils are soft.<br><br>
+  
+        <strong>Cooking Tip:</strong> Squeeze lemon juice before serving for brightness.
+      `
+    },
+    {
+      title: "Banana Pancakes",
+      img: "images/banana-pancakes.jpg",
+      desc: `
+        <strong>Ingredients:</strong><br>
+        • 2 ripe bananas 🍌<br>
+        • 2 eggs 🥚<br>
+        • ½ cup oats or flour<br>
+        • Cinnamon (optional)<br><br>
+  
+        <strong>Steps:</strong><br>
+        1. Mash bananas, mix with eggs and oats.<br>
+        2. Heat pan, cook small pancakes until golden.<br>
+        3. Serve with honey or fruit.<br><br>
+  
+        <strong>Cooking Tip:</strong> Great for quick breakfasts — gluten-free if you use oats.
+      `
+    }
+  ];
+  
+  const today = new Date();
+  const weekNumber = Math.floor(today.getTime() / (7 * 24 * 60 * 60 * 1000));
+  const recipeIndex = weekNumber % weeklyRecipes.length;
+  const selectedRecipe = weeklyRecipes[recipeIndex];
+  
+  document.getElementById('weeklyRecipeTitle').innerText = selectedRecipe.title;
+  document.getElementById('weeklyRecipeImg').src = selectedRecipe.img;
+  document.getElementById('weeklyRecipeDesc').innerHTML = selectedRecipe.desc;
+  </script>
+  
 
   <footer>
-    <p>© 2025 Zero Hunger Web. All rights reserved.</p>
+    <p>© 2025 NourishWise. All rights reserved.</p>
   </footer>
 </body>
 </html>
