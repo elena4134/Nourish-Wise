@@ -9,8 +9,26 @@ const isoToName = {
   "NG": "Nigeria",
   "KE": "Kenya",
   "UG": "Uganda",
-  "CD": "Democratic Republic of the Congo"
+  "CD": "Democratic Republic of the Congo",
+  "IN": "India",
+  "BD": "Bangladesh",
+  "PH": "Philippines",
+  "HT": "Haiti",
+  "VE": "Venezuela",
+  "YE": "Yemen",
+  "AF": "Afghanistan",
+  "BR": "Brazil",
+  "US": "United States",
+  "MX": "Mexico",
+  "ZA": "South Africa",
+  "PK": "Pakistan",
+  "ID": "Indonesia",
+  "CN": "China",
+  "AU": "Australia",
+  "GB": "United Kingdom",
+  "DE": "Germany"
 };
+
 
 /***********************
  *   LOAD HUNGER DATA  *
@@ -133,12 +151,14 @@ if (closeBtn) {
 }
 
 document.addEventListener("click", (e) => {
+  if (!sidePanel) return; // skip if no panel exists
   const clickedInsidePanel = sidePanel.contains(e.target);
   const clickedOnCountry = e.target.tagName.toLowerCase() === "path";
   if (!clickedInsidePanel && !clickedOnCountry) {
     sidePanel.classList.remove("side-panel-open");
   }
 });
+
 
 /***********************
  *   NUTRITION SLIDES  *
@@ -198,7 +218,11 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, { threshold: 0.3 });
 
-observer.observe(document.querySelector("#hunger-stats"));
+const statsSection = document.querySelector("#hunger-stats");
+if (statsSection) {
+  observer.observe(statsSection);
+}
+
 
 /***********************
  *   RECIPE MODAL      *
