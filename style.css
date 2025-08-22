@@ -2423,3 +2423,143 @@ section {
   margin-top: 60px;  /* breathing room */
   z-index: 1;
 }
+
+/* --- Fix container clipping --- */
+#nutrition-guides .slide-content,
+#nutrition-guides .slide {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Meal planner and result styling */
+.meal-planner {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 14px;
+  background: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+/* Ensure next section sits below properly */
+.flip-card-section {
+  position: relative;
+  margin-top: 100px; /* push it down */
+  clear: both;
+  z-index: 0;
+}
+/* Fix cut-off meal planner results */
+.nutrition-section .slide,
+.nutrition-section .slide-content,
+.nutrition-section .meal-planner,
+.nutrition-section .meal-result {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  position: relative !important;
+  z-index: 5;
+}
+
+/* Meal Planner Result box styling */
+#mealPlannerResult {
+  margin-top: 15px;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #007b5e;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* IMPORTANT FIXES */
+  position: relative;
+  z-index: 100;          /* makes sure it shows above the next section */
+  overflow: visible;     /* prevents content from being cut */
+}
+.nutrition-section {
+  position: relative;
+  z-index: 1;            /* lower than the result */
+  overflow: visible;     /* allow content to expand */
+  padding-bottom: 100px; /* give space so it's not overlapped */
+}
+
+/* Fix meal planner result cut-off */
+.meal-planner {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5; /* lift it above backgrounds */
+}
+
+.meal-result {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  white-space: pre-line; /* preserve line breaks */
+}
+
+  main {
+  display: block;
+  padding-bottom: 250px; /* makes sure footer is pushed */
+}
+footer {
+  position: relative; /* not fixed */
+  bottom: 0;
+}
+
+/* === Nutrition section: let it grow and sit above the next section === */
+#nutrition-guides {
+  /* keep the look */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* optional parallax feel without the 100vh lock */
+  background-attachment: fixed;
+
+  padding: 60px 0;
+  min-height: 100vh;       /* hero feel, but can grow */
+  height: auto !important; /* key: no hard lock */
+  overflow: visible !important;
+  position: relative;
+  z-index: 2;              /* sit above the section below */
+}
+
+/* The next section should sit under it, not over it */
+#nutrition-guides + section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide “hidden” things properly (your JS toggles this class) */
+.hidden { display: none !important; }
+
+/* Learn more blocks: default closed unless opened by JS */
+#nutrition-guides .ng-more { display: none; }
+#nutrition-guides .ng-more.open { display: block; }
+
+/* Meal planner visibility + spacing */
+#nutrition-guides .meal-planner.hidden { display: none !important; }
+#nutrition-guides .meal-result { margin-top: 12px; }
+
+/* Make sure the footer flows after all content and never overlaps */
+footer {
+  position: static !important;
+  clear: both;
+}
+
+
