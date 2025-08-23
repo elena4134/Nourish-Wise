@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recipes | Zero Hunger Web</title>
+  <title>Recipes | NourishWise</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .zero-waste-cards-flex {
@@ -86,22 +86,19 @@
     </nav>
   </header>
 
-<!-- Recipe Page Layout -->
 <section id="local-recipes" class="recipe-section">
   <div class="container">
     <h2>🍴 Locally Sourced Recipes</h2>
     <div class="recipe-cards">
       
-      <!-- Recipe Card -->
       <div class="recipe-card" data-recipe="lentils">
-        <img src="images/friedrice.jpg" alt="Rice & Lentils">
+        <img src="images/rice.jpg" alt="Rice & Lentils">
         <div class="recipe-info">
           <h3>Rice & Lentils</h3>
           <p>Nutritious, affordable, and simple to prepare.</p>
         </div>
       </div>
 
-      <!-- Recipe Card -->
       <div class="recipe-card" data-recipe="stirfry">
         <img src="images/vegestirfry.png" alt="Veggie Stir Fry">
         <div class="recipe-info">
@@ -110,7 +107,6 @@
         </div>
       </div>
 
-      <!-- Recipe Card -->
       <div class="recipe-card" data-recipe="porridge">
         <img src="images/proteinporridge.jpg" alt="Protein Porridge">
         <div class="recipe-info">
@@ -119,7 +115,6 @@
         </div>
       </div>
 
-      <!-- NEW: Recipe Card 1 -->
       <div class="recipe-card" data-recipe="curry">
         <img src="images/vegetablecurry.jpg" alt="Vegetable Curry">
         <div class="recipe-info">
@@ -128,7 +123,6 @@
         </div>
       </div>
 
-      <!-- NEW: Recipe Card 2 -->
       <div class="recipe-card" data-recipe="salad">
         <img src="images/gardensalad.webp" alt="Fresh Garden Salad">
         <div class="recipe-info">
@@ -137,7 +131,6 @@
         </div>
       </div>
 
-      <!-- NEW: Recipe Card 3 -->
       <div class="recipe-card" data-recipe="soup">
         <img src="images/soup.jpg" alt="Pumpkin Soup">
         <div class="recipe-info">
@@ -146,7 +139,6 @@
         </div>
       </div>
       
-      <!-- Recipe Modal -->
       <div id="recipeModal" class="modal">
         <div class="modal-content">
           <span class="close-btn">&times;</span>
@@ -183,7 +175,6 @@
   transform: scale(1.03);
 }
 
-/* Overlay effect */
 .recipe-card::after {
   content: "View Recipe";
   position: absolute;
@@ -201,7 +192,6 @@
   opacity: 1;
 }
 
-/* Modal styling */
 .modal {
   display: none;
   position: fixed;
@@ -367,7 +357,6 @@ window.addEventListener('click', (e) => {
 
 </script>
 
-  <!-- Recipe Modal -->
   <div id="recipeModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -376,9 +365,6 @@ window.addEventListener('click', (e) => {
     </div>
   </div>
   
-
-<!-- recipe.html -->
-<!-- recipe.html -->
 <section class="recipe-section container">
   <h2 class="section-title">Beginner-Friendly Recipes <span>✅</span></h2>
   <div class="beginner-cards">
@@ -521,9 +507,6 @@ window.addEventListener('click', (e) => {
   });
   </script>
 
-
-  <!-- Zero Waste Recipes Section -->
-  <!-- Zero Waste Recipes Section -->
   <section class="recipe-section container">
     <h2 class="section-title">Zero Waste Recipes 🌱</h2>
     <div class="zero-waste-cards-flex">
@@ -621,8 +604,7 @@ window.addEventListener('click', (e) => {
       </div>
     </div>
   </section>
-<!--low cost-->
-<!-- recipe.html -->
+
 <section class="recipe-section container">
   <h2 class="section-title">Low-Cost Recipes</h2>
   <div class="low-cost-cards">
@@ -760,7 +742,6 @@ window.addEventListener('click', (e) => {
   to {opacity: 1;}
 }
 
-/* Overlay for low-cost recipes */
 .lowcost-overlay {
   position: fixed;
   top: 0;
@@ -774,7 +755,6 @@ window.addEventListener('click', (e) => {
   z-index: 2000; /* make sure it's above recipe of the week */
 }
 
-/* Centered popup */
 .lowcost-popup {
   background: #fff;
   padding: 20px 30px;
@@ -790,7 +770,6 @@ window.addEventListener('click', (e) => {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
-/* Close button */
 .lowcost-close-btn {
   position: absolute;
   top: 12px;
@@ -801,14 +780,13 @@ window.addEventListener('click', (e) => {
   cursor: pointer;
 }
 
-/* Estimated cost – move to bottom */
 .lowcost-cost {
   margin-top: 20px;
   padding: 8px 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #1b5e20; /* dark green */
-  background: #e8f5e9; /* soft green background */
+  color: #1b5e20; 
+  background: #e8f5e9; 
   border-radius: 6px;
   display: block;
   text-align: center;
@@ -817,7 +795,6 @@ window.addEventListener('click', (e) => {
 </style>
 
 <script>
-// Recipes + price data
 const lowCostRecipes = {
   friedrice: {
     title: "Basic Fried Rice",
@@ -878,14 +855,12 @@ const lowCostRecipes = {
   
 };
 
-// Modal elements
 const lowCostModal = document.getElementById("lowCostModal");
 const lowCostTitle = document.getElementById("lowCostTitle");
 const lowCostContent = document.getElementById("lowCostContent");
 const lowCostPrice = document.getElementById("lowCostPrice");
 const lowCostCloseBtn = document.getElementById("lowCostCloseBtn");
 
-// Card click
 document.querySelectorAll(".low-cost-card").forEach(card => {
   card.addEventListener("click", () => {
     let recipeKey = "friedrice"; // default
@@ -902,7 +877,7 @@ document.querySelectorAll(".low-cost-card").forEach(card => {
   });
 });
 
-// Close modal
+
 lowCostCloseBtn.addEventListener("click", () => {
   lowCostModal.style.display = "none";
 });
@@ -914,8 +889,7 @@ window.addEventListener("click", (e) => {
 
 </script>
 
-<!--recipe of the week-->
-<!-- recipe.html -->
+
 <section class="recipe-section container section-color1">
   <h2 class="section-title">Recipe of the Week <span>🍳</span></h2>
   <div class="recipe-highlight" id="weeklyRecipe">
@@ -958,8 +932,7 @@ window.addEventListener("click", (e) => {
 .recipe-info {
   max-width: 400px;
 }
-/*header*/
-/* Unified header */
+
 header {
   background: rgb(255, 255, 255); /* semi-transparent */
   border-bottom: 1px solid #ffffff;
@@ -978,15 +951,13 @@ header .container {
   margin: auto;
 }
 
-/* Logo */
 header .logo a {
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  color: #007b5e; /* themed green */
+  color: #007b5e; 
 }
 
-/* Nav */
 header nav ul {
   list-style: none;
   display: flex;
@@ -1004,7 +975,7 @@ header nav a {
 }
 
 header nav a.active {
-  border-bottom: 2px solid #f0c000; /* yellow underline for active */
+  border-bottom: 2px solid #f0c000; 
 }
 
 
