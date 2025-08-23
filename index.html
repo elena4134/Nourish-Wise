@@ -1082,14 +1082,7 @@ THE SOFTWARE.
     <span class="zoom-value">100%</span>
     <button class="zoom-in">+</button>
   </div>
-  
 
-  <!--<section id="map" class="map-section">
-    <div class="container">
-      <h2>Hunger-Affected Regions</h2>
-      <iframe src="https://www.google.com/maps/d/embed?mid=1U8KX3c8k-EXAMPLE-HUNGER-MAP" width="100%" height="480" style="border:0;"></iframe>
-    </div>
-  </section>-->
 
   <section id="hunger-stats" class="stats-section">
     <h2>People Affected by Hunger</h2>
@@ -1192,8 +1185,6 @@ THE SOFTWARE.
     </div>
   </section>
 
-  <!-- Donation Modal -->
-<!-- Donation Modal -->
 <div id="donationModal" class="donation-modal">
   <div class="donation-content">
     <span class="donation-close">&times;</span>
@@ -1220,17 +1211,14 @@ THE SOFTWARE.
     <h3>Official Donation Links 🌍</h3>
     <ul class="donation-links">
       <li><a href="https://www.wfp.org/support-us/stories/donate" target="_blank">World Food Programme (WFP)</a></li>
-      <li><a href="https://donatenow.unicef.org/" target="_blank">UNICEF – Global Donations</a></li>
-      <li><a href="https://donate.redcross.org.my/" target="_blank">Red Crescent Malaysia</a></li>
       <li><a href="https://www.actionagainsthunger.org/donate/" target="_blank">Action Against Hunger</a></li>
     </ul>
   </div>
 </div>
 
 <style>
-  /* Donation Modal Background */
 .donation-modal {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -1242,7 +1230,6 @@ THE SOFTWARE.
   z-index: 3000;
 }
 
-/* Modal Box */
 .donation-content {
   background: #fff;
   padding: 2em;
@@ -1254,7 +1241,6 @@ THE SOFTWARE.
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* Close Button */
 .donation-close {
   position: absolute;
   top: 12px;
@@ -1264,7 +1250,6 @@ THE SOFTWARE.
   color: #444;
 }
 
-/* Buttons */
 .donation-options {
   margin: 1em 0;
   display: flex;
@@ -1344,29 +1329,24 @@ THE SOFTWARE.
 
 </style>
 <script>
-  // Get modal & elements
 const donationModal = document.getElementById("donationModal");
 const donationClose = document.querySelector(".donation-close");
 const getInvolvedBtn = document.querySelector("#getInvolvedBtn"); // Your intro button
 
-// Open modal when clicking Get Involved
 getInvolvedBtn.addEventListener("click", () => {
   donationModal.style.display = "flex";
 });
 
-// Close modal
 donationClose.addEventListener("click", () => {
   donationModal.style.display = "none";
 });
 
-// Close when clicking outside the modal
 window.addEventListener("click", (e) => {
   if (e.target === donationModal) {
     donationModal.style.display = "none";
   }
 });
 
-// Optional: Clicking preset amounts fills input
 document.querySelectorAll(".donate-amount").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelector(".donation-input").value = btn.textContent.replace("$", "");
