@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     let currentQuiz = null;
   
-    // Open quiz
     document.querySelectorAll(".play-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const quizKey = btn.dataset.quiz;
@@ -80,12 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // Close quiz
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
   
-    // Submit quiz
     submitBtn.addEventListener("click", () => {
       let score = 0;
       let feedback = "";
@@ -112,8 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${feedback || "🎉 Perfect score! Well done!"}
       `;
     });
-  
-    // Close when clicking outside
+
     window.addEventListener("click", e => {
       if (e.target === modal) {
         modal.style.display = "none";
@@ -121,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //other
   document.addEventListener('DOMContentLoaded', () => {
     // === QUESTION SETS ===
     const farmingQuestions = [
@@ -177,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     };
   
-    // === UTILS: start quiz in container ===
+
     function startQuiz(containerEl, questions, modalEl) {
       if (!containerEl) return;
       let idx = 0, score = 0;
@@ -239,7 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
       renderQuestion();
     }
   
-    // === OPEN LISTENERS (safe attach) ===
     const farmPlay = document.querySelector('.play-btn-farm');
     if (farmPlay) {
       farmPlay.addEventListener('click', () => {
@@ -249,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
-    // food-waste play buttons
     document.querySelectorAll('.play-btn-fw').forEach(btn => {
       btn.addEventListener('click', () => {
         const key = btn.dataset.fw;
@@ -261,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // === CLOSE LOGIC ===
     document.querySelectorAll('.modal-close').forEach(closeBtn => {
       closeBtn.addEventListener('click', () => {
         const id = closeBtn.dataset.target;
@@ -278,7 +270,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (inner) inner.innerHTML = '';
     }
   
-    // Click outside to close
     window.addEventListener('click', (e) => {
       const modals = document.querySelectorAll('.quiz-modal');
       modals.forEach(m => {
